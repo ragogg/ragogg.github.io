@@ -126,7 +126,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -175,6 +175,189 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/crontab/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/30/crontab/" class="post-title-link" itemprop="url">crontab</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-30 23:00:00 / Modified: 23:04:24" itemprop="dateCreated datePublished" datetime="2022-03-30T23:00:00+08:00">2022-03-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Linux-crontab-命令"><a href="#Linux-crontab-命令" class="headerlink" title="Linux crontab 命令"></a>Linux crontab 命令</h1><p>Linux crontab 是用来定期执行程序的命令。</p>
+<p>crond 命令每分钟会定期检查是否有要执行的工作，如果有要执行的工作便会自动执行该工作。</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p><code>crontab [ -u user ] file</code></p>
+<p>或</p>
+<p><code>crontab [ -u user ] &#123; -l | -r | -e &#125;</code></p>
+<p>说明：</p>
+<p>crontab 是用来让使用者在固定时间或固定间隔执行程序之用，换句话说，也就是类似使用者的时程表。</p>
+<p><code>-u user</code> 是指设定指定 user 的时程表，这个前提是你必须要有其权限(比如说是 root)才能够指定他人的时程表。如果不使用 <code>-u user</code> 的话，就是表示设定自己的时程表。</p>
+<p>参数说明：</p>
+<ul>
+<li><code>-e</code> : 执行文字编辑器来设定时程表，内定的文字编辑器是 VI，如果你想用别的文字编辑器，则请先设定 VISUAL 环境变数来指定使用那个文字编辑器(比如说 setenv VISUAL joe)</li>
+<li><code>-r</code> : 删除目前的时程表</li>
+<li><code>-l</code> : 列出目前的时程表</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/30/crontab/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/SFTP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/30/SFTP/" class="post-title-link" itemprop="url">SFTP</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-30 22:58:00 / Modified: 23:04:24" itemprop="dateCreated datePublished" datetime="2022-03-30T22:58:00+08:00">2022-03-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="SFTP-命令"><a href="#SFTP-命令" class="headerlink" title="SFTP 命令"></a>SFTP 命令</h1><ul>
+<li><p><code>help</code> 取得帮助</p>
+</li>
+<li><p><code>pwd</code> 打印服务器当前目录</p>
+</li>
+<li><p><code>lpwd</code> 打印本机当前目录</p>
+</li>
+<li><p><code>cd</code> 切换服务器当前目录</p>
+</li>
+<li><p><code>lcd</code> 切换本机当前目录</p>
+</li>
+<li><p><code>ls</code> 列出服务器当前目录下的文件</p>
+</li>
+<li><p><code>lls</code> 列出本机当前目录下的文件</p>
+</li>
+<li><p><code>mkdir</code> 为服务器创建目录</p>
+</li>
+<li><p><code>lmkdir</code> 为本机创建目录</p>
+</li>
+<li><p><code>get</code> 取得远程服务器上的指定文件</p>
+</li>
+<li><p><code>put</code> 上传本地指定的文件到远程服务器上</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/Maven/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -205,7 +388,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-03-30 21:30:00 / Modified: 22:52:40" itemprop="dateCreated datePublished" datetime="2022-03-30T21:30:00+08:00">2022-03-30</time>
+      <time title="Created: 2022-03-30 21:30:00 / Modified: 23:04:24" itemprop="dateCreated datePublished" datetime="2022-03-30T21:30:00+08:00">2022-03-30</time>
     </span>
 
   
@@ -277,7 +460,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-03-30 20:55:00 / Modified: 22:52:40" itemprop="dateCreated datePublished" datetime="2022-03-30T20:55:00+08:00">2022-03-30</time>
+      <time title="Created: 2022-03-30 20:55:00 / Modified: 23:04:24" itemprop="dateCreated datePublished" datetime="2022-03-30T20:55:00+08:00">2022-03-30</time>
     </span>
 
   
@@ -357,7 +540,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-03-30 20:55:00 / Modified: 22:52:40" itemprop="dateCreated datePublished" datetime="2022-03-30T20:55:00+08:00">2022-03-30</time>
+      <time title="Created: 2022-03-30 20:55:00 / Modified: 23:04:24" itemprop="dateCreated datePublished" datetime="2022-03-30T20:55:00+08:00">2022-03-30</time>
     </span>
 
   
@@ -378,181 +561,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/03/30/yum/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/Linux%20Filesystem%20Hierarchy%20Standard/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="GG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/30/Linux%20Filesystem%20Hierarchy%20Standard/" class="post-title-link" itemprop="url">Linux Filesystem Hierarchy Standard</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-03-30 20:50:00 / Modified: 22:52:40" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="EN"><a href="#EN" class="headerlink" title="EN"></a>EN</h1><h2 id="The-Root-Filesystem"><a href="#The-Root-Filesystem" class="headerlink" title="The Root Filesystem"></a>The Root Filesystem</h2><p>The contents of the root filesystem must be adequate to boot, restore, recover, and/or repair the system.</p>
-<p>To boot a system, enough software and data must be present on the root partition to mount other filesystems. This includes utilities, configuration, boot loader information, and other essential start-up data. /usr, /opt, and /var are designed such that they may be located on other partitions or filesystems.</p>
-<p>To enable recovery and/or repair of a system, those utilities needed by an experienced maintainer to diagnose and reconstruct a damaged system must be present on the root filesystem.</p>
-<p>To restore a system, those utilities needed to restore from system backups (on floppy, tape, etc.) must be present on the root filesystem.</p>
-<ul>
-<li>/bin : Essential user command binaries (for use by all users)</li>
-<li>/boot : Static files of the boot loader</li>
-<li>/dev : Device files</li>
-<li>/etc : Host-specific system configuration</li>
-<li>/home : User home directories (optional)</li>
-<li>/lib : Essential shared libraries and kernel modules</li>
-<li>/lib : Alternate format essential shared libraries (optional)</li>
-<li>/media : Mount point for removable media</li>
-<li>/mnt : Mount point for a temporarily mounted filesystem</li>
-<li>/root : Home directory for the root user (optional)</li>
-<li>/run : Run-time variable data</li>
-<li>/sbin : System binaries</li>
-<li>/srv : Data for services provided by this system</li>
-<li>/tmp : Temporary files</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/30/Linux%20Filesystem%20Hierarchy%20Standard/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/MySQL%20-%20Ubuntu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="GG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/30/MySQL%20-%20Ubuntu/" class="post-title-link" itemprop="url">MySQL - Ubuntu</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-03-30 20:50:00 / Modified: 22:52:40" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="MySQL-8-安装"><a href="#MySQL-8-安装" class="headerlink" title="MySQL 8 安装"></a>MySQL 8 安装</h1><h2 id="MySQL-APT-Repository"><a href="#MySQL-APT-Repository" class="headerlink" title="MySQL APT Repository"></a>MySQL APT Repository</h2><p>APT 地址：<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/repo/apt/">https://dev.mysql.com/downloads/repo/apt/</a></p>
-<p>Ubuntu 内下载命令：wget <a target="_blank" rel="noopener" href="https://repo.mysql.com//mysql-apt-config_0.8.15-1_all.deb">https://repo.mysql.com//mysql-apt-config_0.8.15-1_all.deb</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@VM-0-16-ubuntu:~$ wget https://repo.mysql.com//mysql-apt-config_0.8.15-1_all.deb</span><br><span class="line">--2020-06-05 09:23:21--  https://repo.mysql.com//mysql-apt-config_0.8.15-1_all.deb</span><br><span class="line">Resolving repo.mysql.com (repo.mysql.com)... 23.199.73.25</span><br><span class="line">Connecting to repo.mysql.com (repo.mysql.com)|23.199.73.25|:443... connected.</span><br><span class="line">HTTP request sent, awaiting response... 200 OK</span><br><span class="line">Length: 35532 (35K) [application/x-debian-package]</span><br><span class="line">Saving to: ‘mysql-apt-config_0.8.15-1_all.deb’</span><br><span class="line"></span><br><span class="line">mysql-apt-config_0.8.15-1_all 100%[=================================================&gt;]  34.70K  82.2KB/s    <span class="keyword">in</span> 0.4s</span><br><span class="line"></span><br><span class="line">2020-06-05 09:23:29 (82.2 KB/s) - ‘mysql-apt-config_0.8.15-1_all.deb’ saved [35532/35532]</span><br><span class="line"></span><br><span class="line">ubuntu@VM-0-16-ubuntu:~$ <span class="built_in">ls</span></span><br><span class="line">mysql-apt-config_0.8.15-1_all.deb</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/30/MySQL%20-%20Ubuntu/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>

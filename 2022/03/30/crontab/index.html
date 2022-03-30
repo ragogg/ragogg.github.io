@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"clockworkmonkeystudio.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Linux crontab 命令Linux crontab 是用来定期执行程序的命令。 crond 命令每分钟会定期检查是否有要执行的工作，如果有要执行的工作便会自动执行该工作。 语法crontab [ -u user ] file 或 crontab [ -u user ] &amp;#123; -l | -r | -e &amp;#125; 说明： crontab 是用来让使用者在固定时间或固定间隔执行程序之">
+<meta property="og:type" content="article">
+<meta property="og:title" content="crontab">
+<meta property="og:url" content="https://clockworkmonkeystudio.com/2022/03/30/crontab/index.html">
+<meta property="og:site_name" content="ClockworkMonkey Studio">
+<meta property="og:description" content="Linux crontab 命令Linux crontab 是用来定期执行程序的命令。 crond 命令每分钟会定期检查是否有要执行的工作，如果有要执行的工作便会自动执行该工作。 语法crontab [ -u user ] file 或 crontab [ -u user ] &amp;#123; -l | -r | -e &amp;#125; 说明： crontab 是用来让使用者在固定时间或固定间隔执行程序之">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-30T15:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-30T15:04:24.534Z">
+<meta property="article:author" content="GG">
+<meta property="article:tag" content="ClockworkMonkey">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://clockworkmonkeystudio.com/2022/03/30/crontab/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://clockworkmonkeystudio.com/2022/03/30/crontab/","path":"2022/03/30/crontab/","title":"crontab"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>crontab | ClockworkMonkey Studio</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ClockworkMonkey Studio</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux-crontab-%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">Linux crontab 命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%B6%E7%A8%8B%E8%A1%A8%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">时程表的格式如下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90"><span class="nav-number">4.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E4%BE%8B%E5%AD%90"><span class="nav-number">5.</span> <span class="nav-text">完整例子</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1"><span class="nav-number">5.1.</span> <span class="nav-text">添加计划任务</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">GG</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ClockworkMonkey" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ClockworkMonkey" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:clockworkmonkey.dev@outlook.com" title="E-Mail → mailto:clockworkmonkey.dev@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/ClockworkMonkey" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/crontab/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="crontab | ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          crontab
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-30 23:00:00 / Modified: 23:04:24" itemprop="dateCreated datePublished" datetime="2022-03-30T23:00:00+08:00">2022-03-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="Linux-crontab-命令"><a href="#Linux-crontab-命令" class="headerlink" title="Linux crontab 命令"></a>Linux crontab 命令</h1><p>Linux crontab 是用来定期执行程序的命令。</p>
+<p>crond 命令每分钟会定期检查是否有要执行的工作，如果有要执行的工作便会自动执行该工作。</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p><code>crontab [ -u user ] file</code></p>
+<p>或</p>
+<p><code>crontab [ -u user ] &#123; -l | -r | -e &#125;</code></p>
+<p>说明：</p>
+<p>crontab 是用来让使用者在固定时间或固定间隔执行程序之用，换句话说，也就是类似使用者的时程表。</p>
+<p><code>-u user</code> 是指设定指定 user 的时程表，这个前提是你必须要有其权限(比如说是 root)才能够指定他人的时程表。如果不使用 <code>-u user</code> 的话，就是表示设定自己的时程表。</p>
+<p>参数说明：</p>
+<ul>
+<li><code>-e</code> : 执行文字编辑器来设定时程表，内定的文字编辑器是 VI，如果你想用别的文字编辑器，则请先设定 VISUAL 环境变数来指定使用那个文字编辑器(比如说 setenv VISUAL joe)</li>
+<li><code>-r</code> : 删除目前的时程表</li>
+<li><code>-l</code> : 列出目前的时程表</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="时程表的格式如下："><a href="#时程表的格式如下：" class="headerlink" title="时程表的格式如下："></a>时程表的格式如下：</h1><p><code>f1 f2 f3 f4 f5 program</code></p>
+<ul>
+<li>其中 f1 是表示分钟，f2 表示小时，f3 表示一个月份中的第几日，f4 表示月份，f5 表示一个星期中的第几天。program 表示要执行的程序。</li>
+<li>当 f1 为 * 时表示每分钟都要执行 program，f2 为 * 时表示每小时都要执行程序，其馀类推</li>
+<li>当 f1 为 a-b 时表示从第 a 分钟到第 b 分钟这段时间内要执行，f2 为 a-b 时表示从第 a 到第 b 小时都要执行，其馀类推</li>
+<li>当 f1 为 */n 时表示每 n 分钟个时间间隔执行一次，f2 为 */n 表示每 n 小时个时间间隔执行一次，其馀类推</li>
+<li>当 f1 为 a, b, c,… 时表示第 a, b, c,… 分钟要执行，f2 为 a, b, c,… 时表示第 a, b, c…个小时要执行，其馀类推</li>
+</ul>
+<p>使用者也可以将所有的设定先存放在文件中，用 crontab file 的方式来设定时程表。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">* * * * * command to be executed</span><br><span class="line">- - - - -</span><br><span class="line">| | | | |</span><br><span class="line">| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)</span><br><span class="line">| | | ------- Month (1 - 12)</span><br><span class="line">| | --------- Day of month (1 - 31)</span><br><span class="line">| ----------- Hour (0 - 23)</span><br><span class="line">------------- Minute (0 - 59)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>“*” 代表取值范围内的数字,</p>
+</li>
+<li><p>“/“ 代表”每”,</p>
+</li>
+<li><p>“-“ 代表从某个数字到某个数字,</p>
+</li>
+<li><p>“,” 分开几个离散的数字</p>
+</li>
+</ul>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># 意思是每两个小时重启一次apache </span><br><span class="line">0 */2 * * * /sbin/service httpd restart</span><br><span class="line"></span><br><span class="line"># 意思是每天7：50开启ssh服务 </span><br><span class="line">50 7 * * * /sbin/service sshd start</span><br><span class="line"></span><br><span class="line"># 意思是每天22：50关闭ssh服务</span><br><span class="line">50 22 * * * /sbin/service sshd stop</span><br><span class="line"></span><br><span class="line"># 每月1号和15号检查/home 磁盘</span><br><span class="line">0 0 1,15 * * fsck /home</span><br><span class="line"></span><br><span class="line"># 每小时的第一分执行 /home/bruce/backup这个文件</span><br><span class="line">1 * * * * /home/bruce/backup</span><br><span class="line"></span><br><span class="line"># 每周一至周五3点钟，在目录/home中，查找文件名为*.xxx的文件，并删除4天前的文件。</span><br><span class="line">00 03 * * 1-5 find /home &quot;*.xxx&quot; -mtime +4 -exec rm &#123;&#125; \;</span><br><span class="line"></span><br><span class="line"># 意思是每月的1、11、21、31日是的6：30执行一次ls命令</span><br><span class="line">30 6 */10 * * ls</span><br><span class="line"></span><br><span class="line"># 使用 python3.7 执行 /home/ubuntu/PyCharm/EMailBot/bus.py 文件</span><br><span class="line">*/10 * * * * python3.7 /home/ubuntu/PyCharm/EMailBot/bus.py</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="完整例子"><a href="#完整例子" class="headerlink" title="完整例子"></a>完整例子</h1><h2 id="添加计划任务"><a href="#添加计划任务" class="headerlink" title="添加计划任务"></a>添加计划任务</h2><ol>
+<li>执行命令</li>
+</ol>
+<p><code>crontab -e</code></p>
+<ol start="2">
+<li>使用 vim 编辑文件，在最后一行添加命令</li>
+</ol>
+<p><code>*/10 * * * * python3.7 /home/ubuntu/PyCharm/EMailBot/bus.py</code> 表示每十分钟执行一次 <code>python3.7 /home/ubuntu/PyCharm/EMailBot/bus.py</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># Edit this file to introduce tasks to be run by cron.</span><br><span class="line"># </span><br><span class="line"># Each task to run has to be defined through a single line</span><br><span class="line"># indicating with different fields when the task will be run</span><br><span class="line"># and what command to run for the task</span><br><span class="line"># </span><br><span class="line"># To define the time you can provide concrete values for</span><br><span class="line"># minute (m), hour (h), day of month (dom), month (mon),</span><br><span class="line"># and day of week (dow) or use &#x27;*&#x27; in these fields (for &#x27;any&#x27;).# </span><br><span class="line"># Notice that tasks will be started based on the cron&#x27;s system</span><br><span class="line"># daemon&#x27;s notion of time and timezones.</span><br><span class="line"># </span><br><span class="line"># Output of the crontab jobs (including errors) is sent through</span><br><span class="line"># email to the user the crontab file belongs to (unless redirected).</span><br><span class="line"># </span><br><span class="line"># For example, you can run a backup of all your user accounts</span><br><span class="line"># at 5 a.m every week with:</span><br><span class="line"># 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/</span><br><span class="line"># </span><br><span class="line"># For more information see the manual pages of crontab(5) and cron(8)</span><br><span class="line"># </span><br><span class="line"># m h  dom mon dow   command</span><br><span class="line">*/10 * * * * python3.7 /home/ubuntu/PyCharm/EMailBot/bus.py</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>保存退出</p>
+</li>
+<li><p>重启 cron 服务</p>
+</li>
+</ol>
+<p><code>service cron restart</code></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/03/30/SFTP/" rel="prev" title="SFTP">
+                  <i class="fa fa-chevron-left"></i> SFTP
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GG</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
