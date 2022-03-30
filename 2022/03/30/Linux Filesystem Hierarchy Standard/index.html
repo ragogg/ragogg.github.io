@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"clockworkmonkeystudio.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="ENThe Root FilesystemThe contents of the root filesystem must be adequate to boot, restore, recover, and&#x2F;or repair the system. To boot a system, enough software and data must be present on the root pa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux Filesystem Hierarchy Standard">
+<meta property="og:url" content="https://clockworkmonkeystudio.com/2022/03/30/Linux%20Filesystem%20Hierarchy%20Standard/index.html">
+<meta property="og:site_name" content="ClockworkMonkey&#39;s Blog">
+<meta property="og:description" content="ENThe Root FilesystemThe contents of the root filesystem must be adequate to boot, restore, recover, and&#x2F;or repair the system. To boot a system, enough software and data must be present on the root pa">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-30T12:50:00.000Z">
+<meta property="article:modified_time" content="2022-03-30T12:51:56.520Z">
+<meta property="article:author" content="GG">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://clockworkmonkeystudio.com/2022/03/30/Linux%20Filesystem%20Hierarchy%20Standard/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://clockworkmonkeystudio.com/2022/03/30/Linux%20Filesystem%20Hierarchy%20Standard/","path":"2022/03/30/Linux Filesystem Hierarchy Standard/","title":"Linux Filesystem Hierarchy Standard"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Linux Filesystem Hierarchy Standard | ClockworkMonkey's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ClockworkMonkey's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#EN"><span class="nav-number">1.</span> <span class="nav-text">EN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Root-Filesystem"><span class="nav-number">1.1.</span> <span class="nav-text">The Root Filesystem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-usr-Hierarchy"><span class="nav-number">1.2.</span> <span class="nav-text">The &#x2F;usr Hierarchy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-var-Hierarchy"><span class="nav-number">2.</span> <span class="nav-text">The &#x2F;var Hierarchy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Operating-System-Specific-Annex"><span class="nav-number">2.1.</span> <span class="nav-text">Operating System Specific Annex</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ZH"><span class="nav-number">3.</span> <span class="nav-text">ZH</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.1.</span> <span class="nav-text">根文件系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#usr-%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="nav-number">3.2.</span> <span class="nav-text">&#x2F;usr 层次结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#var-%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="nav-number">3.3.</span> <span class="nav-text">&#x2F;var 层次结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%93%E7%94%A8%E9%99%84%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">操作系统专用附件</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">GG</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/Linux%20Filesystem%20Hierarchy%20Standard/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey's Blog">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Linux Filesystem Hierarchy Standard | ClockworkMonkey's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux Filesystem Hierarchy Standard
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-30 20:50:00 / Modified: 20:51:56" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="EN"><a href="#EN" class="headerlink" title="EN"></a>EN</h1><h2 id="The-Root-Filesystem"><a href="#The-Root-Filesystem" class="headerlink" title="The Root Filesystem"></a>The Root Filesystem</h2><p>The contents of the root filesystem must be adequate to boot, restore, recover, and/or repair the system.</p>
+<p>To boot a system, enough software and data must be present on the root partition to mount other filesystems. This includes utilities, configuration, boot loader information, and other essential start-up data. /usr, /opt, and /var are designed such that they may be located on other partitions or filesystems.</p>
+<p>To enable recovery and/or repair of a system, those utilities needed by an experienced maintainer to diagnose and reconstruct a damaged system must be present on the root filesystem.</p>
+<p>To restore a system, those utilities needed to restore from system backups (on floppy, tape, etc.) must be present on the root filesystem.</p>
+<ul>
+<li>/bin : Essential user command binaries (for use by all users)</li>
+<li>/boot : Static files of the boot loader</li>
+<li>/dev : Device files</li>
+<li>/etc : Host-specific system configuration</li>
+<li>/home : User home directories (optional)</li>
+<li>/lib : Essential shared libraries and kernel modules</li>
+<li>/lib : Alternate format essential shared libraries (optional)</li>
+<li>/media : Mount point for removable media</li>
+<li>/mnt : Mount point for a temporarily mounted filesystem</li>
+<li>/root : Home directory for the root user (optional)</li>
+<li>/run : Run-time variable data</li>
+<li>/sbin : System binaries</li>
+<li>/srv : Data for services provided by this system</li>
+<li>/tmp : Temporary files</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="The-usr-Hierarchy"><a href="#The-usr-Hierarchy" class="headerlink" title="The /usr Hierarchy"></a>The <code>/usr</code> Hierarchy</h2><p>/usr is the second major section of the filesystem. /usr is shareable, read-only data. That means that /usr should be shareable between various FHS-compliant hosts and must not be written to. Any information that is host-specific or varies with time is stored elsewhere.</p>
+<p>Large software packages must not use a direct subdirectory under the /usr hierarchy.</p>
+<ul>
+<li>/usr/bin : Most user commands</li>
+<li>/usr/include : Directory for standard include files.</li>
+<li>/usr/lib : Libraries for programming and packages</li>
+<li>/usr/libexec : Binaries run by other programs (optional)</li>
+<li>/usr/lib<qual> : Alternate format libraries (optional)</li>
+<li>/usr/local : Local hierarchy</li>
+<li>/usr/sbin : Non-essential standard system binaries</li>
+<li>/usr/share : Architecture-independent data</li>
+<li>/usr/src : Source code (optional)</li>
+</ul>
+<h1 id="The-var-Hierarchy"><a href="#The-var-Hierarchy" class="headerlink" title="The /var Hierarchy"></a>The /var Hierarchy</h1><p>/var contains variable data files. This includes spool directories and files, administrative and logging data, and transient and temporary files.</p>
+<p>Some portions of /var are not shareable between different systems. For instance, /var/log, /var/lock, and /var/run. Other portions may be shared, notably /var/mail, /var/cache/man, /var/cache/fonts, and /var/spool/news.</p>
+<p>/var is specified here in order to make it possible to mount /usr read-only. Everything that once went into /usr that is written to during system operation (as opposed to installation and software maintenance) must be in /var.</p>
+<p>If /var cannot be made a separate partition, it is often preferable to move /var out of the root partition and into the /usr partition. (This is sometimes done to reduce the size of the root partition or when space runs low in the root partition.) However, /var must not be linked to /usr because this makes separation of /usr and /var more difficult and is likely to create a naming conflict. Instead, link /var to /usr/var.</p>
+<p>Applications must generally not add directories to the top level of /var. Such directories should only be added if they have some system-wide implication, and in consultation with the FHS mailing list.</p>
+<ul>
+<li>/var/account : Process accounting logs (optional)</li>
+<li>/var/cache : Application cache data</li>
+<li>/var/crash : System crash dumps (optional)</li>
+<li>/var/games : Variable game data (optional)</li>
+<li>/var/lib : Variable state information<ul>
+<li>/var/lib/<editor> : Editor backup files and state (optional)</li>
+<li>/var/lib/color : Color management information (optional)</li>
+<li>/var/lib/hwclock : State directory for hwclock (optional)</li>
+<li>/var/lib/misc : Miscellaneous variable data</li>
+<li>/var/lock : Lock files</li>
+</ul>
+</li>
+<li>/var/mail : User mailbox files (optional)</li>
+<li>/var/opt : Variable data for /opt</li>
+<li>/var/run : Run-time variable data</li>
+<li>/var/spool : Application spool data<ul>
+<li>/var/spool/lpd : Line-printer daemon print queues (optional)</li>
+<li>/var/spool/rwho : Rwhod files (optional)</li>
+</ul>
+</li>
+<li>/var/tmp : Temporary files preserved between system reboots</li>
+<li>/var/yp : Network Information Service (NIS) database files (optional)</li>
+</ul>
+<h2 id="Operating-System-Specific-Annex"><a href="#Operating-System-Specific-Annex" class="headerlink" title="Operating System Specific Annex"></a>Operating System Specific Annex</h2><p>Linux</p>
+<ul>
+<li>/ : Root directory</li>
+<li>/bin : Essential user command binaries (for use by all<br>users)</li>
+<li>/dev : Devices and special files</li>
+<li>/etc : Host-specific system configuration</li>
+<li>/proc : Kernel and process information virtual filesystem</li>
+<li>/sbin : Essential system binaries</li>
+<li>/sys : Kernel and system information virtual filesystem</li>
+<li>/usr/include : Header files included by C programs</li>
+<li>/usr/src : Source code</li>
+<li>/var/spool/cron : cron and at jobs</li>
+</ul>
+<h1 id="ZH"><a href="#ZH" class="headerlink" title="ZH"></a>ZH</h1><h2 id="根文件系统"><a href="#根文件系统" class="headerlink" title="根文件系统"></a>根文件系统</h2><p>根文件系统的内容必须足以启动、还原、恢复和/或修复系统。</p>
+<p>要启动系统，根分区上必须有足够的软件和数据来挂载其他文件系统。这包括实用程序、配置、启动加载器信息和其他重要的启动数据。/usr 、 /opt 和 /var 被设计成可以位于其他分区或文件系统上。</p>
+<p>为了使系统能够恢复和/或修复，有经验的维护者在诊断和重建受损系统时所需的实用程序必须存在于根文件系统中。</p>
+<p>要恢复系统，根文件系统上必须有从系统备份（软盘、磁带等）中恢复所需的实用程序。</p>
+<ul>
+<li>/bin : 基本的用户命令二进制文件（供所有用户使用）。</li>
+<li>/boot : 开机加载器的静态文件。</li>
+<li>/dev : 设备文件</li>
+<li>/etc : 主机专用系统配置</li>
+<li>/home : 用户主目录（可选）。</li>
+<li>/lib : 基本的共享库和内核模块。</li>
+<li>/lib<qual> : 备用格式基本共享库（可选）。</li>
+<li>/media : 可移动媒体的安装点</li>
+<li>/mnt : 暂时安装的文件系统的挂载点</li>
+<li>/root : 根用户的主目录（可选）。</li>
+<li>/run : 运行时变量数据</li>
+<li>/sbin : 系统二进制文件</li>
+<li>/srv : 本系统提供的服务数据。</li>
+<li>/tmp : 临时文件</li>
+</ul>
+<h2 id="usr-层次结构"><a href="#usr-层次结构" class="headerlink" title="/usr 层次结构"></a>/usr 层次结构</h2><p>/usr 是文件系统的第二个主要部分。/usr 是可共享、只读的数据。这意味着 /usr 应该是可以在各种符合FHS的主机之间共享的，不能被写入。任何主机特有的或随时间变化的信息都存储在其他地方。</p>
+<p>大型软件包不得使用 /usr 层次结构下的直接子目录。</p>
+<ul>
+<li>/usr/bin : 大多数用户命令</li>
+<li>/usr/include : 标准include文件的目录</li>
+<li>/usr/lib : 用于编程和软件包的库</li>
+<li>/usr/libexec : 由其他程序运行的二进制文件 (可选)</li>
+<li>/usr/lib<qual> : 备用格式库 (可选)</li>
+<li>/usr/local : 本地层次结构</li>
+<li>/usr/sbin : 非必要的标准系统二进制文件</li>
+<li>/usr/share : 架构无关的数据</li>
+<li>/usr/src : 源代码 (可选)</li>
+</ul>
+<h2 id="var-层次结构"><a href="#var-层次结构" class="headerlink" title="/var 层次结构"></a>/var 层次结构</h2><p>/var 包含可变数据文件。这包括线轴目录和文件、管理和日志数据以及瞬时和临时文件。</p>
+<p>/var 的某些部分不能在不同的系统之间共享，例如，/var/log 、 /var/lock 和 /var/run。例如，/var/log、/var/lock和/var/run。其他部分可以共享，特别是/var/mail、/var/cache/man、/var/cache/fonts和/var/spool/news。</p>
+<p>这里指定 /var 是为了让 /usr 只读挂载成为可能。所有曾经进入/usr，并在系统运行过程中（相对于安装和软件维护而言）被写入的内容都必须在/var中。</p>
+<p>如果 /var 不能成为一个独立的分区，通常最好将 /var 从根分区中移出，移到 /usr 分区中。(有时这样做是为了减小根分区的大小，或者当根分区的空间不够用时)。但是，不能将 /var 链接到 /usr，因为这样会使 /usr 和 /var 的分离变得更加困难，而且很可能造成命名冲突。相反，应将 /var 链接到 /usr/var。</p>
+<p>应用程序一般不能在 /var 的顶层添加目录。只有当这些目录对整个系统有影响的时候才可以添加，并且要与FHS邮件列表协商。</p>
+<ul>
+<li>/var/account : 处理会计日志(可选)</li>
+<li>/var/cache : 应用程序缓存数据</li>
+<li>/var/crash : 系统崩溃转储(可选)</li>
+<li>/var/games : 可变的游戏数据(可选)</li>
+<li>/var/lib : 变量状态信息<ul>
+<li>/var/lib/<editor> : 编辑器备份文件和状态（可选）</li>
+<li>/var/lib/color : 颜色管理信息（可选）</li>
+<li>/var/lib/hwclock : hwclock的状态目录（可选）</li>
+<li>/var/lib/misc : 杂项变量数据</li>
+</ul>
+</li>
+<li>/var/lock : 锁定文件</li>
+<li>/var/mail : 用户邮箱文件（可选）</li>
+<li>/var/opt : /opt的变量数据</li>
+<li>/var/run : 运行时变量数据</li>
+<li>/var/spool : 应用程序线轴数据<ul>
+<li>/var/spool/lpd : 行式打印机守护程序打印队列（可选）</li>
+<li>/var/spool/rwho : Rwhod文件（可选）</li>
+</ul>
+</li>
+<li>/var/tmp : 系统重启之间保存的临时文件</li>
+<li>/var/yp : 网络信息服务（NIS）数据库文件（可选）</li>
+</ul>
+<h1 id="操作系统专用附件"><a href="#操作系统专用附件" class="headerlink" title="操作系统专用附件"></a>操作系统专用附件</h1><p>Linux</p>
+<ul>
+<li>/ : 根目录</li>
+<li>/bin : 基本的用户命令二进制文件（供所有用户使用）</li>
+<li>/dev : 设备和特殊文件</li>
+<li>/etc : 主机专用系统配置</li>
+<li>/proc : 内核和进程信息虚拟文件系统</li>
+<li>/sbin : 基本系统二进制文件</li>
+<li>/sys : 内核和系统信息虚拟文件系统</li>
+<li>/usr/include : C程序包含的头文件</li>
+<li>/usr/src : 源代码</li>
+<li>/var/spool/cron : cron和jobs</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/03/30/MySQL%20-%20CentOS/" rel="prev" title="MySQL - CentOS">
+                  <i class="fa fa-chevron-left"></i> MySQL - CentOS
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/03/30/yum/" rel="next" title="yum">
+                  yum <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GG</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

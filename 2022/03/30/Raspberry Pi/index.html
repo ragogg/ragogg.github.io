@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"clockworkmonkeystudio.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Raspberry Pi 树莓派型号：Raspberry Pi 4 Model B Rev 1.2 树莓派系统版本：Ubuntu Server 20.04.1 LTS Ubuntu 软件镜像：中国科学技术大学开源软件镜像  修改主机名称Ubuntu 主机名称文件：&#x2F;etc&#x2F;hostname。编辑 &#x2F;etc&#x2F;hostname 文件，将主机名由 ubuntu 改为 RaspberryPi。 1ubun">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Raspberry Pi">
+<meta property="og:url" content="https://clockworkmonkeystudio.com/2022/03/30/Raspberry%20Pi/index.html">
+<meta property="og:site_name" content="ClockworkMonkey&#39;s Blog">
+<meta property="og:description" content="Raspberry Pi 树莓派型号：Raspberry Pi 4 Model B Rev 1.2 树莓派系统版本：Ubuntu Server 20.04.1 LTS Ubuntu 软件镜像：中国科学技术大学开源软件镜像  修改主机名称Ubuntu 主机名称文件：&#x2F;etc&#x2F;hostname。编辑 &#x2F;etc&#x2F;hostname 文件，将主机名由 ubuntu 改为 RaspberryPi。 1ubun">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-30T12:50:00.000Z">
+<meta property="article:modified_time" content="2022-03-30T12:51:56.683Z">
+<meta property="article:author" content="GG">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://clockworkmonkeystudio.com/2022/03/30/Raspberry%20Pi/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://clockworkmonkeystudio.com/2022/03/30/Raspberry%20Pi/","path":"2022/03/30/Raspberry Pi/","title":"Raspberry Pi"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Raspberry Pi | ClockworkMonkey's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ClockworkMonkey's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Raspberry-Pi"><span class="nav-number">1.</span> <span class="nav-text">Raspberry Pi</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D%E7%A7%B0"><span class="nav-number">2.</span> <span class="nav-text">修改主机名称</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9-Ubuntu-%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-number">3.</span> <span class="nav-text">修改 Ubuntu 软件源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">更新软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA"><span class="nav-number">5.</span> <span class="nav-text">修改时区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Docker"><span class="nav-number">6.</span> <span class="nav-text">安装 Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6-1"><span class="nav-number">6.1.</span> <span class="nav-text">更新软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%B9%B6%E6%89%A7%E8%A1%8C%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC"><span class="nav-number">6.2.</span> <span class="nav-text">下载并执行安装脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA-ubuntu-%E7%94%A8%E6%88%B7%E6%B7%BB%E5%8A%A0-docker-%E6%9D%83%E9%99%90"><span class="nav-number">6.3.</span> <span class="nav-text">为 ubuntu 用户添加 docker 权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2-Ubuntu-%E7%9A%84-Dokcer-%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-number">6.4.</span> <span class="nav-text">更换 Ubuntu 的 Dokcer 软件源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%95%9C%E5%83%8F%E6%96%87%E4%BB%B6"><span class="nav-number">6.4.1.</span> <span class="nav-text">修改镜像文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2-Docker-%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">6.4.2.</span> <span class="nav-text">更换 Docker 镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%96%B0%E5%8A%A0%E8%BD%BD-daemon%EF%BC%8C%E5%B9%B6%E9%87%8D%E5%90%AF-Docker%EF%BC%9A"><span class="nav-number">6.4.3.</span> <span class="nav-text">重新加载 daemon，并重启 Docker：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C-docker-info%EF%BC%8C%E6%9F%A5%E7%9C%8B-Docker-%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">6.4.4.</span> <span class="nav-text">执行 docker info，查看 Docker 镜像源</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">GG</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/Raspberry%20Pi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey's Blog">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Raspberry Pi | ClockworkMonkey's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Raspberry Pi
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-30 20:50:00 / Modified: 20:51:56" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="Raspberry-Pi"><a href="#Raspberry-Pi" class="headerlink" title="Raspberry Pi"></a>Raspberry Pi</h1><ul>
+<li>树莓派型号：Raspberry Pi 4 Model B Rev 1.2</li>
+<li>树莓派系统版本：Ubuntu Server 20.04.1 LTS</li>
+<li>Ubuntu 软件镜像：中国科学技术大学开源软件镜像</li>
+</ul>
+<h1 id="修改主机名称"><a href="#修改主机名称" class="headerlink" title="修改主机名称"></a>修改主机名称</h1><p>Ubuntu 主机名称文件：<code>/etc/hostname</code>。编辑 <code>/etc/hostname</code> 文件，将主机名由 ubuntu 改为 <code>RaspberryPi</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@ubuntu:~$ sudo vim /etc/hostname</span><br></pre></td></tr></table></figure>
+
+<p>文件内容改为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RaspberryPi</span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>sudo reboot</code> 命令重启树莓派，重启完成后再次登录即可。</p>
+<span id="more"></span>
+
+<h1 id="修改-Ubuntu-软件源"><a href="#修改-Ubuntu-软件源" class="headerlink" title="修改 Ubuntu 软件源"></a>修改 Ubuntu 软件源</h1><p>Ubuntu 软件源文件：<code>/etc/apt/sources.list</code></p>
+<p>备份软件源文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ sudo <span class="built_in">cp</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br></pre></td></tr></table></figure>
+
+<p>修改文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ sudo vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+
+<p>在文件内注释掉默认的软件源，在文件末尾追加中科大的软件源。（注意 Ubuntu 版本，Ubuntu Server 20.04.1 LTS 是 focal）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> 中国科学技术大学</span><br><span class="line"> https://mirrors.ustc.edu.cn</span><br><span class="line"> 默认注释了源码仓库，如有需要可自行取消注释</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu-ports/ focal main restricted universe multiverse</span><br><span class="line"> deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal main main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-updates main restricted universe multiverse</span><br><span class="line"> deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-backports main restricted universe multiverse</span><br><span class="line"> deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-security main restricted universe multiverse</span><br><span class="line"> deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"> 预发布软件源，不建议启用</span><br><span class="line"> deb https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse</span><br><span class="line"> deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+
+<h1 id="更新软件"><a href="#更新软件" class="headerlink" title="更新软件"></a>更新软件</h1><p>修改软件源之后执行 <code>sudo apt update</code> 命令可能会报错，提示 <code>sources.list</code> 文件被锁定，可以使用 <code>sudo reboot</code> 命令重启系统后再执行更新。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ sudo apt update</span><br><span class="line">ubuntu@RaspberryPi:~$ sudo apt upgrade</span><br></pre></td></tr></table></figure>
+
+<h1 id="修改时区"><a href="#修改时区" class="headerlink" title="修改时区"></a>修改时区</h1><p>系统默认是 UTC 时间，修改时区需要使用 <code>sudo tzselect</code> 命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ sudo tzselect</span><br><span class="line">Please identify a location so that time zone rules can be <span class="built_in">set</span> correctly.</span><br><span class="line">Please select a continent, ocean, <span class="string">&quot;coord&quot;</span>, or <span class="string">&quot;TZ&quot;</span>.</span><br><span class="line">1) Africa							     7) Europe</span><br><span class="line">2) Americas							     8) Indian Ocean</span><br><span class="line">3) Antarctica							     9) Pacific Ocean</span><br><span class="line">4) Asia								    10) coord - I want to use geographical coordinates.</span><br><span class="line">5) Atlantic Ocean						    11) TZ - I want to specify the timezone using the Posix TZ format.</span><br><span class="line">6) Australia</span><br><span class="line">? 4</span><br><span class="line">Please select a country whose clocks agree with yours.</span><br><span class="line">1) Afghanistan		  10) Cyprus		    19) Japan		      28) Macau			37) Qatar		  46) Turkmenistan</span><br><span class="line">2) Armenia		  11) East Timor	    20) Jordan		      29) Malaysia		38) Russia		  47) United Arab Emirates</span><br><span class="line">3) Azerbaijan		  12) Georgia		    21) Kazakhstan	      30) Mongolia		39) Saudi Arabia	  48) Uzbekistan</span><br><span class="line">4) Bahrain		  13) Hong Kong		    22) Korea (North)	      31) Myanmar (Burma)	40) Singapore		  49) Vietnam</span><br><span class="line">5) Bangladesh		  14) India		    23) Korea (South)	      32) Nepal			41) Sri Lanka		  50) Yemen</span><br><span class="line">6) Bhutan		  15) Indonesia		    24) Kuwait		      33) Oman			42) Syria</span><br><span class="line">7) Brunei		  16) Iran		    25) Kyrgyzstan	      34) Pakistan		43) Taiwan</span><br><span class="line">8) Cambodia		  17) Iraq		    26) Laos		      35) Palestine		44) Tajikistan</span><br><span class="line">9) China		  18) Israel		    27) Lebanon		      36) Philippines		45) Thailand</span><br><span class="line">? 9</span><br><span class="line">Please select one of the following timezones.</span><br><span class="line">1) Beijing Time</span><br><span class="line">2) Xinjiang Time</span><br><span class="line">? 1</span><br><span class="line"></span><br><span class="line">The following information has been given:</span><br><span class="line"></span><br><span class="line">	China</span><br><span class="line">	Beijing Time</span><br><span class="line"></span><br><span class="line">Therefore TZ=<span class="string">&#x27;Asia/Shanghai&#x27;</span> will be used.</span><br><span class="line">Selected time is now:	Sun Dec 20 16:20:00 CST 2020.</span><br><span class="line">Universal Time is now:	Sun Dec 20 08:20:00 UTC 2020.</span><br><span class="line">Is the above information OK?</span><br><span class="line">1) Yes</span><br><span class="line">2) No</span><br><span class="line">? 1</span><br><span class="line"></span><br><span class="line">You can make this change permanent <span class="keyword">for</span> yourself by appending the line</span><br><span class="line">	TZ=<span class="string">&#x27;Asia/Shanghai&#x27;</span>; <span class="built_in">export</span> TZ</span><br><span class="line">to the file <span class="string">&#x27;.profile&#x27;</span> <span class="keyword">in</span> your home directory; <span class="keyword">then</span> <span class="built_in">log</span> out and <span class="built_in">log</span> <span class="keyword">in</span> again.</span><br><span class="line"></span><br><span class="line">Here is that TZ value again, this time on standard output so that you</span><br><span class="line">can use the /usr/bin/tzselect <span class="built_in">command</span> <span class="keyword">in</span> shell scripts:</span><br><span class="line">Asia/Shanghai</span><br></pre></td></tr></table></figure>
+
+<p>按照提示，修改 <code>.profile</code> 文件，在文件末尾追加 <code>TZ=&#39;Asia/Shanghai&#39;; export TZ</code> ：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ sudo vim .profile</span><br></pre></td></tr></table></figure>
+
+<p>文件末尾追加时区信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># TZ</span></span><br><span class="line">TZ=<span class="string">&#x27;Asia/Shanghai&#x27;</span>; <span class="built_in">export</span> TZ</span><br></pre></td></tr></table></figure>
+
+<p>使 <code>.profile</code> 文件生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ sudo <span class="built_in">source</span> .profile</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h1><h2 id="更新软件-1"><a href="#更新软件-1" class="headerlink" title="更新软件"></a>更新软件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ sudo apt update</span><br><span class="line">ubuntu@RaspberryPi:~$ sudo apt upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载并执行安装脚本"><a href="#下载并执行安装脚本" class="headerlink" title="下载并执行安装脚本"></a>下载并执行安装脚本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ curl -fsSL https://get.docker.com -o get-docker.sh</span><br><span class="line">ubuntu@RaspberryPi:~$ sudo sh get-docker.sh</span><br></pre></td></tr></table></figure>
+
+<h2 id="为-ubuntu-用户添加-docker-权限"><a href="#为-ubuntu-用户添加-docker-权限" class="headerlink" title="为 ubuntu 用户添加 docker 权限"></a>为 ubuntu 用户添加 docker 权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ sudo usermod -aG docker $(<span class="built_in">whoami</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="更换-Ubuntu-的-Dokcer-软件源"><a href="#更换-Ubuntu-的-Dokcer-软件源" class="headerlink" title="更换 Ubuntu 的 Dokcer 软件源"></a>更换 Ubuntu 的 Dokcer 软件源</h2><h3 id="修改镜像文件"><a href="#修改镜像文件" class="headerlink" title="修改镜像文件"></a>修改镜像文件</h3><p>在 <code>/etc/apt/source.list</code> 文件末尾追加以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Docker</span></span><br><span class="line">deb [<span class="built_in">arch</span>=arm64] https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu focal stable</span><br></pre></td></tr></table></figure>
+
+<h3 id="更换-Docker-镜像源"><a href="#更换-Docker-镜像源" class="headerlink" title="更换 Docker 镜像源"></a>更换 Docker 镜像源</h3><p>Docker 的镜像源在文件 <code>/etc/docker/daemon.json</code> 内</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ sudo vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
+
+<p>文件内容改为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;registry-mirrors&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;https://ustc-edu-cn.mirror.aliyuncs.com/&quot;</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="重新加载-daemon，并重启-Docker："><a href="#重新加载-daemon，并重启-Docker：" class="headerlink" title="重新加载 daemon，并重启 Docker："></a>重新加载 daemon，并重启 Docker：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ sudo systemctl daemon-reload</span><br><span class="line">ubuntu@RaspberryPi:~$ sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="执行-docker-info，查看-Docker-镜像源"><a href="#执行-docker-info，查看-Docker-镜像源" class="headerlink" title="执行 docker info，查看 Docker 镜像源"></a>执行 <code>docker info</code>，查看 Docker 镜像源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@RaspberryPi:~$ docker info</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"> Registry Mirrors:</span><br><span class="line">  https://ustc-edu-cn.mirror.aliyuncs.com/</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/03/30/SSH/" rel="prev" title="SSH">
+                  <i class="fa fa-chevron-left"></i> SSH
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/03/30/MySQL%20-%20Ubuntu/" rel="next" title="MySQL - Ubuntu">
+                  MySQL - Ubuntu <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GG</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

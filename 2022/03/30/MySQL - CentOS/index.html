@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"clockworkmonkeystudio.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="系统配置 CentOS Linux release 7.9.2009 (Core) MySQL 8.0.24-1  MySQL 资源地址 MySQL Community Downloads -&gt; https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F; MySQL Community Server &#x2F; https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F;mysql&#x2F; My">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL - CentOS">
+<meta property="og:url" content="https://clockworkmonkeystudio.com/2022/03/30/MySQL%20-%20CentOS/index.html">
+<meta property="og:site_name" content="ClockworkMonkey&#39;s Blog">
+<meta property="og:description" content="系统配置 CentOS Linux release 7.9.2009 (Core) MySQL 8.0.24-1  MySQL 资源地址 MySQL Community Downloads -&gt; https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F; MySQL Community Server &#x2F; https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F;mysql&#x2F; My">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-30T12:50:00.000Z">
+<meta property="article:modified_time" content="2022-03-30T12:51:56.549Z">
+<meta property="article:author" content="GG">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://clockworkmonkeystudio.com/2022/03/30/MySQL%20-%20CentOS/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://clockworkmonkeystudio.com/2022/03/30/MySQL%20-%20CentOS/","path":"2022/03/30/MySQL - CentOS/","title":"MySQL - CentOS"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>MySQL - CentOS | ClockworkMonkey's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ClockworkMonkey's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">系统配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL-%E8%B5%84%E6%BA%90%E5%9C%B0%E5%9D%80"><span class="nav-number">2.</span> <span class="nav-text">MySQL 资源地址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-MySQL-Yum-Repository"><span class="nav-number">3.</span> <span class="nav-text">安装 MySQL Yum Repository</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-MySQL-Community-Server"><span class="nav-number">4.</span> <span class="nav-text">安装 MySQL Community Server</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-MySQL-%E6%9C%8D%E5%8A%A1"><span class="nav-number">5.</span> <span class="nav-text">启动 MySQL 服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B-MySQL-%E6%9C%8D%E5%8A%A1%E7%8A%B6%E6%80%81"><span class="nav-number">6.</span> <span class="nav-text">查看 MySQL 服务状态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B-root-%E7%94%A8%E6%88%B7%E5%88%9D%E5%A7%8B%E5%AF%86%E7%A0%81"><span class="nav-number">7.</span> <span class="nav-text">查看 root 用户初始密码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9D%E6%AC%A1%E7%99%BB%E9%99%86%E4%BF%AE%E6%94%B9-root-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81"><span class="nav-number">8.</span> <span class="nav-text">初次登陆修改 root 用户密码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86%E7%94%A8%E6%88%B7"><span class="nav-number">9.</span> <span class="nav-text">创建远程登陆用户</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%98%E8%AE%B0-root-%E5%AF%86%E7%A0%81"><span class="nav-number">10.</span> <span class="nav-text">忘记 root 密码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%EF%BC%8C%E8%B7%B3%E8%BF%87%E6%A0%A1%E9%AA%8C%E5%AF%86%E7%A0%81"><span class="nav-number">10.1.</span> <span class="nav-text">修改配置，跳过校验密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E5%BD%95-root-%E7%94%A8%E6%88%B7%EF%BC%8C%E6%B8%85%E7%A9%BA-root-%E5%AF%86%E7%A0%81"><span class="nav-number">10.2.</span> <span class="nav-text">登录 root 用户，清空 root 密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">10.3.</span> <span class="nav-text">恢复配置文件</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">GG</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/MySQL%20-%20CentOS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey's Blog">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="MySQL - CentOS | ClockworkMonkey's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          MySQL - CentOS
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-30 20:50:00 / Modified: 20:51:56" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h1><ul>
+<li>CentOS Linux release 7.9.2009 (Core)</li>
+<li>MySQL 8.0.24-1</li>
+</ul>
+<h1 id="MySQL-资源地址"><a href="#MySQL-资源地址" class="headerlink" title="MySQL 资源地址"></a>MySQL 资源地址</h1><ul>
+<li>MySQL Community Downloads -&gt; <a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/">https://dev.mysql.com/downloads/</a></li>
+<li>MySQL Community Server / <a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a></li>
+<li>MySQL Yum Repository / <a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/repo/yum/">https://dev.mysql.com/downloads/repo/yum/</a></li>
+</ul>
+<span id="more"></span>
+
+<h1 id="安装-MySQL-Yum-Repository"><a href="#安装-MySQL-Yum-Repository" class="headerlink" title="安装 MySQL Yum Repository"></a>安装 MySQL Yum Repository</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">root@ox [01:24:00 AM] [~/Downloads] </span><br><span class="line">-&gt; <span class="comment"># wget https://repo.mysql.com//mysql80-community-release-el7-3.noarch.rpm</span></span><br><span class="line">--2021-04-28 01:24:05--  https://repo.mysql.com//mysql80-community-release-el7-3.noarch.rpm</span><br><span class="line">Resolving repo.mysql.com (repo.mysql.com)... 23.201.152.227</span><br><span class="line">Connecting to repo.mysql.com (repo.mysql.com)|23.201.152.227|:443... connected.</span><br><span class="line">HTTP request sent, awaiting response... 200 OK</span><br><span class="line">Length: 26024 (25K) [application/x-redhat-package-manager]</span><br><span class="line">Saving to: ‘mysql80-community-release-el7-3.noarch.rpm’</span><br><span class="line"></span><br><span class="line">100%[========================================================================================================&gt;] 26,024      39.1KB/s   <span class="keyword">in</span> 0.6s   </span><br><span class="line"></span><br><span class="line">2021-04-28 01:24:10 (39.1 KB/s) - ‘mysql80-community-release-el7-3.noarch.rpm’ saved [26024/26024]</span><br><span class="line"></span><br><span class="line">root@ox [01:24:12 AM] [~/Downloads] </span><br><span class="line">-&gt; <span class="comment"># ll</span></span><br><span class="line">total 21M</span><br><span class="line">-rw-r--r--. 1 root root 26K Apr 25  2019 mysql80-community-release-el7-3.noarch.rpm</span><br><span class="line">-rwxrw-rw-. 1 root root 21M Apr 25 11:32 node-v14.16.1-linux-x64.tar.xz</span><br><span class="line">root@ox [01:24:13 AM] [~/Downloads] </span><br><span class="line">-&gt; <span class="comment"># yum localinstall mysql80-community-release-el7-3.noarch.rpm </span></span><br><span class="line">Loaded plugins: fastestmirror, langpacks</span><br><span class="line">Examining mysql80-community-release-el7-3.noarch.rpm: mysql80-community-release-el7-3.noarch</span><br><span class="line">Marking mysql80-community-release-el7-3.noarch.rpm to be installed</span><br><span class="line">Resolving Dependencies</span><br><span class="line">--&gt; Running transaction check</span><br><span class="line">---&gt; Package mysql80-community-release.noarch 0:el7-3 will be installed</span><br><span class="line">--&gt; Finished Dependency Resolution</span><br><span class="line"></span><br><span class="line">Dependencies Resolved</span><br><span class="line"></span><br><span class="line">==================================================================================================================================================</span><br><span class="line"> Package                                  Arch                  Version              Repository                                              Size</span><br><span class="line">==================================================================================================================================================</span><br><span class="line">Installing:</span><br><span class="line"> mysql80-community-release                noarch                el7-3                /mysql80-community-release-el7-3.noarch                 31 k</span><br><span class="line"></span><br><span class="line">Transaction Summary</span><br><span class="line">==================================================================================================================================================</span><br><span class="line">Install  1 Package</span><br><span class="line"></span><br><span class="line">Total size: 31 k</span><br><span class="line">Installed size: 31 k</span><br><span class="line">Is this ok [y/d/N]: y</span><br><span class="line">Downloading packages:</span><br><span class="line">Running transaction check</span><br><span class="line">Running transaction <span class="built_in">test</span></span><br><span class="line">Transaction <span class="built_in">test</span> succeeded</span><br><span class="line">Running transaction</span><br><span class="line">  Installing : mysql80-community-release-el7-3.noarch                                                                                         1/1 </span><br><span class="line">  Verifying  : mysql80-community-release-el7-3.noarch                                                                                         1/1 </span><br><span class="line"></span><br><span class="line">Installed:</span><br><span class="line">  mysql80-community-release.noarch 0:el7-3                                                                                                        </span><br><span class="line"></span><br><span class="line">Complete!</span><br><span class="line">root@ox [01:59:04 AM] [~/Downloads] </span><br><span class="line">-&gt; <span class="comment"># yum repolist enabled | grep &quot;mysql.*-community.*&quot;</span></span><br><span class="line">mysql-connectors-community/x86_64     MySQL Connectors Community             194</span><br><span class="line">mysql-tools-community/x86_64          MySQL Tools Community                  126</span><br><span class="line">mysql80-community/x86_64              MySQL 8.0 Community Server             247</span><br><span class="line">root@ox [01:59:22 AM] [~/Downloads] </span><br><span class="line">-&gt; <span class="comment"># cd /etc/yum.repos.d </span></span><br><span class="line">root@ox [01:59:45 AM] [/etc/yum.repos.d] </span><br><span class="line">-&gt; <span class="comment"># ll</span></span><br><span class="line">total 56K</span><br><span class="line">-rw-r--r--. 1 root root 1.9K Jul  4  2019 CentOS-Base.repo</span><br><span class="line">-rw-r--r--. 1 root root 1.7K Oct 23  2020 CentOS-Base.repo.backup</span><br><span class="line">-rw-r--r--. 1 root root 1.3K Oct 23  2020 CentOS-CR.repo.backup</span><br><span class="line">-rw-r--r--. 1 root root  649 Oct 23  2020 CentOS-Debuginfo.repo</span><br><span class="line">-rw-r--r--. 1 root root  314 Oct 23  2020 CentOS-fasttrack.repo.backup</span><br><span class="line">-rw-r--r--. 1 root root  630 Oct 23  2020 CentOS-Media.repo</span><br><span class="line">-rw-r--r--. 1 root root 1.3K Oct 23  2020 CentOS-Sources.repo</span><br><span class="line">-rw-r--r--. 1 root root 8.4K Oct 23  2020 CentOS-Vault.repo</span><br><span class="line">-rw-r--r--. 1 root root  616 Oct 23  2020 CentOS-x86_64-kernel.repo</span><br><span class="line">-rw-r--r--. 1 root root 2.2K Apr 28 01:13 docker-ce.repo</span><br><span class="line">-rw-r--r--. 1 root root 2.1K Apr 25  2019 mysql-community.repo</span><br><span class="line">-rw-r--r--. 1 root root 2.1K Apr 25  2019 mysql-community-source.repo</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装-MySQL-Community-Server"><a href="#安装-MySQL-Community-Server" class="headerlink" title="安装 MySQL Community Server"></a>安装 MySQL Community Server</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line">root@ox [02:13:09 AM] [/etc/yum.repos.d] </span><br><span class="line">-&gt; <span class="comment"># yum install mysql-community-server</span></span><br><span class="line">Loaded plugins: fastestmirror, langpacks</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line">Resolving Dependencies</span><br><span class="line">--&gt; Running transaction check</span><br><span class="line">---&gt; Package mysql-community-server.x86_64 0:8.0.24-1.el7 will be installed</span><br><span class="line">--&gt; Processing Dependency: mysql-community-common(x86-64) = 8.0.24-1.el7 <span class="keyword">for</span> package: mysql-community-server-8.0.24-1.el7.x86_64</span><br><span class="line">--&gt; Processing Dependency: mysql-community-client(x86-64) &gt;= 8.0.11 <span class="keyword">for</span> package: mysql-community-server-8.0.24-1.el7.x86_64</span><br><span class="line">--&gt; Running transaction check</span><br><span class="line">---&gt; Package mysql-community-client.x86_64 0:8.0.24-1.el7 will be installed</span><br><span class="line">--&gt; Processing Dependency: mysql-community-client-plugins = 8.0.24-1.el7 <span class="keyword">for</span> package: mysql-community-client-8.0.24-1.el7.x86_64</span><br><span class="line">--&gt; Processing Dependency: mysql-community-libs(x86-64) &gt;= 8.0.11 <span class="keyword">for</span> package: mysql-community-client-8.0.24-1.el7.x86_64</span><br><span class="line">---&gt; Package mysql-community-common.x86_64 0:8.0.24-1.el7 will be installed</span><br><span class="line">--&gt; Running transaction check</span><br><span class="line">---&gt; Package mariadb-libs.x86_64 1:5.5.68-1.el7 will be obsoleted</span><br><span class="line">--&gt; Processing Dependency: libmysqlclient.so.18()(64bit) <span class="keyword">for</span> package: 2:postfix-2.10.1-9.el7.x86_64</span><br><span class="line">--&gt; Processing Dependency: libmysqlclient.so.18(libmysqlclient_18)(64bit) <span class="keyword">for</span> package: 2:postfix-2.10.1-9.el7.x86_64</span><br><span class="line">---&gt; Package mysql-community-client-plugins.x86_64 0:8.0.24-1.el7 will be installed</span><br><span class="line">---&gt; Package mysql-community-libs.x86_64 0:8.0.24-1.el7 will be obsoleting</span><br><span class="line">--&gt; Running transaction check</span><br><span class="line">---&gt; Package mysql-community-libs-compat.x86_64 0:8.0.24-1.el7 will be obsoleting</span><br><span class="line">--&gt; Finished Dependency Resolution</span><br><span class="line"></span><br><span class="line">Dependencies Resolved</span><br><span class="line"></span><br><span class="line">==================================================================================================================================================</span><br><span class="line"> Package                                         Arch                    Version                         Repository                          Size</span><br><span class="line">==================================================================================================================================================</span><br><span class="line">Installing:</span><br><span class="line"> mysql-community-libs                            x86_64                  8.0.24-1.el7                    mysql80-community                  4.0 M</span><br><span class="line">     replacing  mariadb-libs.x86_64 1:5.5.68-1.el7</span><br><span class="line"> mysql-community-libs-compat                     x86_64                  8.0.24-1.el7                    mysql80-community                  1.2 M</span><br><span class="line">     replacing  mariadb-libs.x86_64 1:5.5.68-1.el7</span><br><span class="line"> mysql-community-server                          x86_64                  8.0.24-1.el7                    mysql80-community                  428 M</span><br><span class="line">Installing <span class="keyword">for</span> dependencies:</span><br><span class="line"> mysql-community-client                          x86_64                  8.0.24-1.el7                    mysql80-community                   45 M</span><br><span class="line"> mysql-community-client-plugins                  x86_64                  8.0.24-1.el7                    mysql80-community                  189 k</span><br><span class="line"> mysql-community-common                          x86_64                  8.0.24-1.el7                    mysql80-community                  614 k</span><br><span class="line"></span><br><span class="line">Transaction Summary</span><br><span class="line">==================================================================================================================================================</span><br><span class="line">Install  3 Packages (+3 Dependent packages)</span><br><span class="line"></span><br><span class="line">Total download size: 479 M</span><br><span class="line">Is this ok [y/d/N]: y</span><br><span class="line">Downloading packages:</span><br><span class="line">warning: /var/cache/yum/x86_64/7/mysql80-community/packages/mysql-community-client-plugins-8.0.24-1.el7.x86_64.rpm: Header V3 DSA/SHA1 Signature, key ID 5072e1f5: NOKEY</span><br><span class="line">Public key <span class="keyword">for</span> mysql-community-client-plugins-8.0.24-1.el7.x86_64.rpm is not installed</span><br><span class="line">(1/6): mysql-community-client-plugins-8.0.24-1.el7.x86_64.rpm                                                              | 189 kB  00:00:04     </span><br><span class="line">(2/6): mysql-community-common-8.0.24-1.el7.x86_64.rpm                                                                      | 614 kB  00:00:03     </span><br><span class="line">(3/6): mysql-community-libs-8.0.24-1.el7.x86_64.rpm                                                                        | 4.0 MB  00:00:14     </span><br><span class="line">(4/6): mysql-community-libs-compat-8.0.24-1.el7.x86_64.rpm                                                                 | 1.2 MB  00:00:04     </span><br><span class="line">(5/6): mysql-community-client-8.0.24-1.el7.x86_64.rpm                                                                      |  45 MB  00:00:55     </span><br><span class="line">(6/6): mysql-community-server-8.0.24-1.el7.x86_64.rpm                                                                      | 428 MB  00:06:34     </span><br><span class="line">--------------------------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">Total                                                                                                             1.1 MB/s | 479 MB  00:07:00     </span><br><span class="line">Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mysql</span><br><span class="line">Importing GPG key 0x5072E1F5:</span><br><span class="line"> Userid     : <span class="string">&quot;MySQL Release Engineering &lt;mysql-build@oss.oracle.com&gt;&quot;</span></span><br><span class="line"> Fingerprint: a4a9 4068 76fc bd3c 4567 70c8 8c71 8d3b 5072 e1f5</span><br><span class="line"> Package    : mysql80-community-release-el7-3.noarch (@/mysql80-community-release-el7-3.noarch)</span><br><span class="line"> From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-mysql</span><br><span class="line">Is this ok [y/N]: y</span><br><span class="line">Running transaction check</span><br><span class="line">Running transaction <span class="built_in">test</span></span><br><span class="line">Transaction <span class="built_in">test</span> succeeded</span><br><span class="line">Running transaction</span><br><span class="line">  Installing : mysql-community-client-plugins-8.0.24-1.el7.x86_64                                                                             1/7 </span><br><span class="line">  Installing : mysql-community-common-8.0.24-1.el7.x86_64                                                                                     2/7 </span><br><span class="line">  Installing : mysql-community-libs-8.0.24-1.el7.x86_64                                                                                       3/7 </span><br><span class="line">  Installing : mysql-community-client-8.0.24-1.el7.x86_64                                                                                     4/7 </span><br><span class="line">  Installing : mysql-community-server-8.0.24-1.el7.x86_64                                                                                     5/7 </span><br><span class="line">  Installing : mysql-community-libs-compat-8.0.24-1.el7.x86_64                                                                                6/7 </span><br><span class="line">  Erasing    : 1:mariadb-libs-5.5.68-1.el7.x86_64                                                                                             7/7 </span><br><span class="line">  Verifying  : mysql-community-server-8.0.24-1.el7.x86_64                                                                                     1/7 </span><br><span class="line">  Verifying  : mysql-community-libs-8.0.24-1.el7.x86_64                                                                                       2/7 </span><br><span class="line">  Verifying  : mysql-community-common-8.0.24-1.el7.x86_64                                                                                     3/7 </span><br><span class="line">  Verifying  : mysql-community-libs-compat-8.0.24-1.el7.x86_64                                                                                4/7 </span><br><span class="line">  Verifying  : mysql-community-client-plugins-8.0.24-1.el7.x86_64                                                                             5/7 </span><br><span class="line">  Verifying  : mysql-community-client-8.0.24-1.el7.x86_64                                                                                     6/7 </span><br><span class="line">  Verifying  : 1:mariadb-libs-5.5.68-1.el7.x86_64                                                                                             7/7 </span><br><span class="line"></span><br><span class="line">Installed:</span><br><span class="line">  mysql-community-libs.x86_64 0:8.0.24-1.el7   mysql-community-libs-compat.x86_64 0:8.0.24-1.el7   mysql-community-server.x86_64 0:8.0.24-1.el7  </span><br><span class="line"></span><br><span class="line">Dependency Installed:</span><br><span class="line">  mysql-community-client.x86_64 0:8.0.24-1.el7 mysql-community-client-plugins.x86_64 0:8.0.24-1.el7 mysql-community-common.x86_64 0:8.0.24-1.el7</span><br><span class="line"></span><br><span class="line">Replaced:</span><br><span class="line">  mariadb-libs.x86_64 1:5.5.68-1.el7                                                                                                              </span><br><span class="line"></span><br><span class="line">Complete!</span><br></pre></td></tr></table></figure>
+
+<h1 id="启动-MySQL-服务"><a href="#启动-MySQL-服务" class="headerlink" title="启动 MySQL 服务"></a>启动 MySQL 服务</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@ox [02:23:14 AM] [/etc/yum.repos.d] </span><br><span class="line">-&gt; <span class="comment"># systemctl start mysqld</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="查看-MySQL-服务状态"><a href="#查看-MySQL-服务状态" class="headerlink" title="查看 MySQL 服务状态"></a>查看 MySQL 服务状态</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">root@ox [02:28:44 AM] [/etc/yum.repos.d] </span><br><span class="line">-&gt; <span class="comment"># systemctl status mysqld</span></span><br><span class="line">● mysqld.service - MySQL Server</span><br><span class="line">   Loaded: loaded (/usr/lib/systemd/system/mysqld.service; enabled; vendor preset: disabled)</span><br><span class="line">   Active: active (running) since Wed 2021-04-28 02:28:44 CST; 5s ago</span><br><span class="line">     Docs: man:mysqld(8)</span><br><span class="line">           http://dev.mysql.com/doc/refman/en/using-systemd.html</span><br><span class="line">  Process: 4581 ExecStartPre=/usr/bin/mysqld_pre_systemd (code=exited, status=0/SUCCESS)</span><br><span class="line"> Main PID: 4659 (mysqld)</span><br><span class="line">   Status: <span class="string">&quot;Server is operational&quot;</span></span><br><span class="line">    Tasks: 38</span><br><span class="line">   Memory: 441.5M</span><br><span class="line">   CGroup: /system.slice/mysqld.service</span><br><span class="line">           └─4659 /usr/sbin/mysqld</span><br><span class="line"></span><br><span class="line">Apr 28 02:28:38 ox.gg.com systemd[1]: Starting MySQL Server...</span><br><span class="line">Apr 28 02:28:44 ox.gg.com systemd[1]: Started MySQL Server.</span><br></pre></td></tr></table></figure>
+
+<h1 id="查看-root-用户初始密码"><a href="#查看-root-用户初始密码" class="headerlink" title="查看 root 用户初始密码"></a>查看 root 用户初始密码</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@ox [02:28:52 AM] [/etc/yum.repos.d] </span><br><span class="line">-&gt; <span class="comment"># grep &#x27;temporary password&#x27; /var/log/mysqld.log</span></span><br><span class="line">2021-04-27T18:28:41.300527Z 6 [Note] [MY-010454] [Server] A temporary password is generated <span class="keyword">for</span> root@localhost: &gt;fgv&gt;St_o5Wq</span><br></pre></td></tr></table></figure>
+
+<h1 id="初次登陆修改-root-用户密码"><a href="#初次登陆修改-root-用户密码" class="headerlink" title="初次登陆修改 root 用户密码"></a>初次登陆修改 root 用户密码</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">root@ox [02:30:04 AM] [/etc/yum.repos.d] </span><br><span class="line">-&gt; <span class="comment"># mysql -u root -p             </span></span><br><span class="line">Enter password: </span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection <span class="built_in">id</span> is 10</span><br><span class="line">Server version: 8.0.24</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2021, Oracle and/or its affiliates.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type <span class="string">&#x27;help;&#x27;</span> or <span class="string">&#x27;\h&#x27;</span> <span class="keyword">for</span> <span class="built_in">help</span>. Type <span class="string">&#x27;\c&#x27;</span> to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED BY <span class="string">&#x27;123456.MySQL&#x27;</span>;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; SELECT user, authentication_string, plugin, host FROM mysql.user;</span><br><span class="line">+------------------+------------------------------------------------------------------------+-----------------------+-----------+</span><br><span class="line">| user             | authentication_string                                                  | plugin                | host      |</span><br><span class="line">+------------------+------------------------------------------------------------------------+-----------------------+-----------+</span><br><span class="line">| mysql.infoschema | $A$005<span class="variable">$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED</span> | caching_sha2_password | localhost |</span><br><span class="line">| mysql.session    | $A$005<span class="variable">$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED</span> | caching_sha2_password | localhost |</span><br><span class="line">| mysql.sys        | $A$005<span class="variable">$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED</span> | caching_sha2_password | localhost |</span><br><span class="line">| root             | $A$005<span class="variable">$D</span>	Vc[JF\e!|es1FtZKb1dm.zqNB8T5TWFhoQTzuoQSI6kW5AVXgFUNeC2rG0    | caching_sha2_password | localhost |</span><br><span class="line">+------------------+------------------------------------------------------------------------+-----------------------+-----------+</span><br><span class="line">4 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<h1 id="创建远程登陆用户"><a href="#创建远程登陆用户" class="headerlink" title="创建远程登陆用户"></a>创建远程登陆用户</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; CREATE USER <span class="string">&#x27;gg&#x27;</span>@<span class="string">&#x27;%&#x27;</span> IDENTIFIED BY <span class="string">&#x27;123456.OX.gg&#x27;</span>;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; GRANT ALL PRIVILEGES ON *.* TO <span class="string">&#x27;gg&#x27;</span>@<span class="string">&#x27;%&#x27;</span> WITH GRANT OPTION;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; FLUSH PRIVILEGES;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<h1 id="忘记-root-密码"><a href="#忘记-root-密码" class="headerlink" title="忘记 root 密码"></a>忘记 root 密码</h1><h2 id="修改配置，跳过校验密码"><a href="#修改配置，跳过校验密码" class="headerlink" title="修改配置，跳过校验密码"></a>修改配置，跳过校验密码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[14:56:00] root :: sun  ➜  ~ » vim /etc/my.cnf</span><br></pre></td></tr></table></figure>
+
+<p>添加下面内容，跳过密码校验：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MySQL</span></span><br><span class="line">skip-grant-tables</span><br></pre></td></tr></table></figure>
+
+<h2 id="登录-root-用户，清空-root-密码"><a href="#登录-root-用户，清空-root-密码" class="headerlink" title="登录 root 用户，清空 root 密码"></a>登录 root 用户，清空 root 密码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[14:59:37] root :: sun  ➜  ~ » mysql -u root</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection <span class="built_in">id</span> is 8</span><br><span class="line">Server version: 8.0.24 MySQL Community Server - GPL</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2021, Oracle and/or its affiliates.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type <span class="string">&#x27;help;&#x27;</span> or <span class="string">&#x27;\h&#x27;</span> <span class="keyword">for</span> <span class="built_in">help</span>. Type <span class="string">&#x27;\c&#x27;</span> to clear the current input statement.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mysql&gt; use mysql</span><br><span class="line">Reading table information <span class="keyword">for</span> completion of table and column names</span><br><span class="line">You can turn off this feature to get a quicker startup with -A</span><br><span class="line"></span><br><span class="line">Database changed</span><br><span class="line">mysql&gt; update user <span class="built_in">set</span> authentication_string = <span class="string">&#x27;&#x27;</span> <span class="built_in">where</span> user = <span class="string">&#x27;root&#x27;</span>;</span><br><span class="line">Query OK, 1 row affected (0.00 sec)</span><br><span class="line">Rows matched: 1  Changed: 1  Warnings: 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="恢复配置文件"><a href="#恢复配置文件" class="headerlink" title="恢复配置文件"></a>恢复配置文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[14:56:00] root :: sun  ➜  ~ » vim /etc/my.cnf</span><br></pre></td></tr></table></figure>
+
+<p>注释掉添加的内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MySQL</span></span><br><span class="line">skip-grant-tables</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/03/30/MySQL%20-%20Ubuntu/" rel="prev" title="MySQL - Ubuntu">
+                  <i class="fa fa-chevron-left"></i> MySQL - Ubuntu
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/03/30/Linux%20Filesystem%20Hierarchy%20Standard/" rel="next" title="Linux Filesystem Hierarchy Standard">
+                  Linux Filesystem Hierarchy Standard <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GG</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

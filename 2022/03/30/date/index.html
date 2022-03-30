@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"clockworkmonkeystudio.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="date 命令12[root@ClockworkMonkey ~]# dateTue Mar 29 22:58:19 CST 2022">
+<meta property="og:type" content="article">
+<meta property="og:title" content="date">
+<meta property="og:url" content="https://clockworkmonkeystudio.com/2022/03/30/date/index.html">
+<meta property="og:site_name" content="ClockworkMonkey&#39;s Blog">
+<meta property="og:description" content="date 命令12[root@ClockworkMonkey ~]# dateTue Mar 29 22:58:19 CST 2022">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-30T12:45:00.000Z">
+<meta property="article:modified_time" content="2022-03-30T12:51:56.382Z">
+<meta property="article:author" content="GG">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://clockworkmonkeystudio.com/2022/03/30/date/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://clockworkmonkeystudio.com/2022/03/30/date/","path":"2022/03/30/date/","title":"date"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>date | ClockworkMonkey's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ClockworkMonkey's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#date-%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">date 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E5%8C%BA"><span class="nav-number">1.1.</span> <span class="nav-text">时区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4"><span class="nav-number">1.3.</span> <span class="nav-text">修改系统时间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#timedatectl-%E5%91%BD%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">timedatectl 命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#timedatectl"><span class="nav-number">2.1.</span> <span class="nav-text">timedatectl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#timedatectl-set-timezone-Asia-Shanghai"><span class="nav-number">2.2.</span> <span class="nav-text">timedatectl set-timezone Asia&#x2F;Shanghai</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NTP"><span class="nav-number">3.</span> <span class="nav-text">NTP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-ntpdate"><span class="nav-number">3.1.</span> <span class="nav-text">安装 ntpdate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E6%97%B6%E9%97%B4"><span class="nav-number">3.2.</span> <span class="nav-text">同步时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8"><span class="nav-number">3.3.</span> <span class="nav-text">开机启动</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">GG</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/date/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey's Blog">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="date | ClockworkMonkey's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          date
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-30 20:45:00 / Modified: 20:51:56" itemprop="dateCreated datePublished" datetime="2022-03-30T20:45:00+08:00">2022-03-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="date-命令"><a href="#date-命令" class="headerlink" title="date 命令"></a>date 命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@ClockworkMonkey ~]<span class="comment"># date</span></span><br><span class="line">Tue Mar 29 22:58:19 CST 2022</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="时区"><a href="#时区" class="headerlink" title="时区"></a>时区</h2><ul>
+<li>UTC：世界标准时间</li>
+<li>GMT：格林威治标准时间</li>
+<li>CST：中国标准时间，GMT + 8 = UTC + 8 = CST</li>
+</ul>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">%F：显示年月日</span><br><span class="line">%y：年份的最后两位数字，范围是00 ~ 99</span><br><span class="line">%Y：年份</span><br><span class="line">%m：月份，范围01 ~ 12</span><br><span class="line">%d：当前是几号，按月计算的日期</span><br><span class="line">%M：分钟</span><br><span class="line">%H：小时</span><br><span class="line">%S：秒</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@ClockworkMonkey ~]<span class="comment"># date &quot;+%F&quot;</span></span><br><span class="line">2022-03-29</span><br><span class="line">[root@ClockworkMonkey ~]<span class="comment"># date &quot;+%Y%m%d&quot;</span></span><br><span class="line">20220329</span><br><span class="line">[root@ClockworkMonkey ~]<span class="comment"># date &quot;+%Y-%m-%d %H:%M:%S&quot;</span></span><br><span class="line">2022-03-29 23:00:41</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改系统时间"><a href="#修改系统时间" class="headerlink" title="修改系统时间"></a>修改系统时间</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@ClockworkMonkey ~]<span class="comment"># date -s &quot;2019-09-09 09:09:09&quot;</span></span><br><span class="line">Mon Sep  9 09:09:09 CST 2019</span><br></pre></td></tr></table></figure>
+
+<h1 id="timedatectl-命令"><a href="#timedatectl-命令" class="headerlink" title="timedatectl 命令"></a>timedatectl 命令</h1><h2 id="timedatectl"><a href="#timedatectl" class="headerlink" title="timedatectl"></a>timedatectl</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@ClockworkMonkey ~]<span class="comment"># timedatectl</span></span><br><span class="line">      Local time: Mon 2019-09-09 09:10:00 CST</span><br><span class="line">  Universal time: Mon 2019-09-09 01:10:00 UTC</span><br><span class="line">        RTC time: Tue 2022-03-29 15:02:24</span><br><span class="line">       Time zone: Asia/Shanghai (CST, +0800)</span><br><span class="line">     NTP enabled: no</span><br><span class="line">NTP synchronized: no</span><br><span class="line"> RTC <span class="keyword">in</span> <span class="built_in">local</span> TZ: no</span><br><span class="line">      DST active: n/a</span><br></pre></td></tr></table></figure>
+
+<h2 id="timedatectl-set-timezone-Asia-Shanghai"><a href="#timedatectl-set-timezone-Asia-Shanghai" class="headerlink" title="timedatectl set-timezone Asia/Shanghai"></a>timedatectl set-timezone Asia/Shanghai</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@ClockworkMonkey ~]<span class="comment"># timedatectl set-timezone Asia/Shanghai</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="NTP"><a href="#NTP" class="headerlink" title="NTP"></a>NTP</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.ntppool.org/zh/">https://www.ntppool.org/zh/</a></li>
+<li>NTP 服务器：cn.pool.ntp.org</li>
+</ul>
+<h2 id="安装-ntpdate"><a href="#安装-ntpdate" class="headerlink" title="安装 ntpdate"></a>安装 ntpdate</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@ClockworkMonkey ~]<span class="comment"># yum install ntpdate</span></span><br><span class="line">Loaded plugins: fastestmirror, langpacks</span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line">Package ntpdate-4.2.6p5-29.el7.centos.2.x86_64 already installed and latest version</span><br><span class="line">Nothing to <span class="keyword">do</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="同步时间"><a href="#同步时间" class="headerlink" title="同步时间"></a>同步时间</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">root@localhost [10:27:41 AM] [~] </span><br><span class="line">-&gt; <span class="comment"># ntpdate cn.pool.ntp.org</span></span><br><span class="line">29 Apr 10:27:55 ntpdate[62380]: adjust time server 124.108.20.1 offset -0.000588 sec</span><br><span class="line">root@localhost [10:27:55 AM] [~] </span><br><span class="line">-&gt; <span class="comment"># ntpdate -u cn.pool.ntp.org</span></span><br><span class="line">29 Apr 10:28:08 ntpdate[62383]: adjust time server 119.28.206.193 offset 0.002792 sec</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">root@localhost [10:28:08 AM] [~] </span><br><span class="line">-&gt; <span class="comment"># systemctl status ntpdate</span></span><br><span class="line">● ntpdate.service - Set time via NTP</span><br><span class="line">   Loaded: loaded (/usr/lib/systemd/system/ntpdate.service; disabled; vendor preset: disabled)</span><br><span class="line">   Active: inactive (dead)</span><br><span class="line">root@localhost [10:31:08 AM] [~] </span><br><span class="line">-&gt; <span class="comment"># systemctl start ntpdate</span></span><br><span class="line">root@localhost [10:31:28 AM] [~] </span><br><span class="line">-&gt; <span class="comment"># systemctl status ntpdate</span></span><br><span class="line">● ntpdate.service - Set time via NTP</span><br><span class="line">   Loaded: loaded (/usr/lib/systemd/system/ntpdate.service; disabled; vendor preset: disabled)</span><br><span class="line">   Active: active (exited) since Thu 2021-04-29 10:31:28 CST; 2s ago</span><br><span class="line">  Process: 62427 ExecStart=/usr/libexec/ntpdate-wrapper (code=exited, status=0/SUCCESS)</span><br><span class="line"> Main PID: 62427 (code=exited, status=0/SUCCESS)</span><br><span class="line"></span><br><span class="line">Apr 29 10:31:23 localhost.localdomain systemd[1]: Starting Set time...</span><br><span class="line">Apr 29 10:31:28 localhost.localdomain systemd[1]: Started Set time ...</span><br><span class="line">Hint: Some lines were ellipsized, use -l to show <span class="keyword">in</span> full.</span><br><span class="line"></span><br><span class="line">root@localhost [10:31:43 AM] [~]</span><br><span class="line">-&gt; <span class="comment"># systemctl enable ntpdate</span></span><br><span class="line">Created symlink from /etc/systemd/system/multi-user.target.wants/ntpdate.service to /usr/lib/systemd/system/ntpdate.service.</span><br><span class="line">root@localhost [10:31:58 AM] [~] </span><br><span class="line">-&gt; <span class="comment"># systemctl status ntpdate</span></span><br><span class="line">● ntpdate.service - Set time via NTP</span><br><span class="line">   Loaded: loaded (/usr/lib/systemd/system/ntpdate.service; enabled; vendor preset: disabled)</span><br><span class="line">   Active: active (exited) since Thu 2021-04-29 10:31:28 CST; 41s ago</span><br><span class="line"> Main PID: 62427 (code=exited, status=0/SUCCESS)</span><br><span class="line"></span><br><span class="line">Apr 29 10:31:23 localhost.localdomain systemd[1]: Starting Set time...</span><br><span class="line">Apr 29 10:31:28 localhost.localdomain systemd[1]: Started Set time ...</span><br><span class="line">Hint: Some lines were ellipsized, use -l to show <span class="keyword">in</span> full.</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li>centos7中的date命令 <a target="_blank" rel="noopener" href="https://blog.csdn.net/u013317172/article/details/105024162">https://blog.csdn.net/u013317172/article/details/105024162</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/03/30/firewall/" rel="prev" title="firewall">
+                  <i class="fa fa-chevron-left"></i> firewall
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/03/30/Java/" rel="next" title="Java">
+                  Java <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GG</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

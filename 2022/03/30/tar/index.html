@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"clockworkmonkeystudio.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="tar 命令.tar 格式，打包和解打包都是使用 tar 命令，只是打包并不会压缩文件。 打包123-c 打包-f 指定包名称，需要加 .tar-v 显示打包过程  解包123-x 解包-f 指定包名称-v 显示打包过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tar">
+<meta property="og:url" content="https://clockworkmonkeystudio.com/2022/03/30/tar/index.html">
+<meta property="og:site_name" content="ClockworkMonkey&#39;s Blog">
+<meta property="og:description" content="tar 命令.tar 格式，打包和解打包都是使用 tar 命令，只是打包并不会压缩文件。 打包123-c 打包-f 指定包名称，需要加 .tar-v 显示打包过程  解包123-x 解包-f 指定包名称-v 显示打包过程">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-30T12:55:00.000Z">
+<meta property="article:modified_time" content="2022-03-30T12:51:56.765Z">
+<meta property="article:author" content="GG">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://clockworkmonkeystudio.com/2022/03/30/tar/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://clockworkmonkeystudio.com/2022/03/30/tar/","path":"2022/03/30/tar/","title":"tar"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>tar | ClockworkMonkey's Blog</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ClockworkMonkey's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">tar 命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%93%E5%8C%85"><span class="nav-number">2.</span> <span class="nav-text">打包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E5%8C%85"><span class="nav-number">3.</span> <span class="nav-text">解包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-gz-%E6%96%87%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">.tar.gz 文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%A8%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">用法</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">GG</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/tar/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey's Blog">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="tar | ClockworkMonkey's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          tar
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-30 20:55:00 / Modified: 20:51:56" itemprop="dateCreated datePublished" datetime="2022-03-30T20:55:00+08:00">2022-03-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="tar-命令"><a href="#tar-命令" class="headerlink" title="tar 命令"></a>tar 命令</h1><p><code>.tar</code> 格式，打包和解打包都是使用 <code>tar</code> 命令，只是打包并不会压缩文件。</p>
+<h1 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-c 打包</span><br><span class="line">-f 指定包名称，需要加 .tar</span><br><span class="line">-v 显示打包过程</span><br></pre></td></tr></table></figure>
+
+<h1 id="解包"><a href="#解包" class="headerlink" title="解包"></a>解包</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-x 解包</span><br><span class="line">-f 指定包名称</span><br><span class="line">-v 显示打包过程</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h1 id="tar-gz-文件"><a href="#tar-gz-文件" class="headerlink" title=".tar.gz 文件"></a><code>.tar.gz</code> 文件</h1><p><code>.tar.gz</code> 格式，使用 <code>tar</code> 命令后跟选项的方式实现 <code>tar</code> 命令和 <code>gzip</code> 命令的组合，实现同时进行打包和压缩。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-z 压缩和解压 .tar.gz 文件</span><br></pre></td></tr></table></figure>
+
+<h1 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br></pre></td><td class="code"><pre><span class="line">[root@ox]~/Downloads# tar --help</span><br><span class="line">Usage: tar [OPTION...] [FILE]...</span><br><span class="line">GNU `tar&#x27; saves many files together into a single tape or disk archive, and can</span><br><span class="line">restore individual files from the archive.</span><br><span class="line"></span><br><span class="line">Examples:</span><br><span class="line">  tar -cf archive.tar foo bar  # Create archive.tar from files foo and bar.</span><br><span class="line">  tar -tvf archive.tar         # List all files in archive.tar verbosely.</span><br><span class="line">  tar -xf archive.tar          # Extract all files from archive.tar.</span><br><span class="line"></span><br><span class="line"> Main operation mode:</span><br><span class="line"></span><br><span class="line">  -A, --catenate, --concatenate   append tar files to an archive</span><br><span class="line">  -c, --create               create a new archive</span><br><span class="line">  -d, --diff, --compare      find differences between archive and file system</span><br><span class="line">      --delete               delete from the archive (not on mag tapes!)</span><br><span class="line">  -r, --append               append files to the end of an archive</span><br><span class="line">  -t, --list                 list the contents of an archive</span><br><span class="line">      --test-label           test the archive volume label and exit</span><br><span class="line">  -u, --update               only append files newer than copy in archive</span><br><span class="line">  -x, --extract, --get       extract files from an archive</span><br><span class="line"></span><br><span class="line"> Operation modifiers:</span><br><span class="line"></span><br><span class="line">      --check-device         check device numbers when creating incremental</span><br><span class="line">                             archives (default)</span><br><span class="line">  -g, --listed-incremental=FILE   handle new GNU-format incremental backup</span><br><span class="line">  -G, --incremental          handle old GNU-format incremental backup</span><br><span class="line">      --ignore-failed-read   do not exit with nonzero on unreadable files</span><br><span class="line">      --level=NUMBER         dump level for created listed-incremental archive</span><br><span class="line">  -n, --seek                 archive is seekable</span><br><span class="line">      --no-check-device      do not check device numbers when creating</span><br><span class="line">                             incremental archives</span><br><span class="line">      --no-seek              archive is not seekable</span><br><span class="line">      --occurrence[=NUMBER]  process only the NUMBERth occurrence of each file</span><br><span class="line">                             in the archive; this option is valid only in</span><br><span class="line">                             conjunction with one of the subcommands --delete,</span><br><span class="line">                             --diff, --extract or --list and when a list of</span><br><span class="line">                             files is given either on the command line or via</span><br><span class="line">                             the -T option; NUMBER defaults to 1</span><br><span class="line">      --sparse-version=MAJOR[.MINOR]</span><br><span class="line">                             set version of the sparse format to use (implies</span><br><span class="line">                             --sparse)</span><br><span class="line">  -S, --sparse               handle sparse files efficiently</span><br><span class="line"></span><br><span class="line"> Overwrite control:</span><br><span class="line"></span><br><span class="line">  -k, --keep-old-files       don&#x27;t replace existing files when extracting,</span><br><span class="line">                             treat them as errors</span><br><span class="line">      --keep-directory-symlink   preserve existing symlinks to directories when</span><br><span class="line">                             extracting</span><br><span class="line">      --keep-newer-files     don&#x27;t replace existing files that are newer than</span><br><span class="line">                             their archive copies</span><br><span class="line">      --no-overwrite-dir     preserve metadata of existing directories</span><br><span class="line">      --overwrite            overwrite existing files when extracting</span><br><span class="line">      --overwrite-dir        overwrite metadata of existing directories when</span><br><span class="line">                             extracting (default)</span><br><span class="line">      --recursive-unlink     empty hierarchies prior to extracting directory</span><br><span class="line">      --remove-files         remove files after adding them to the archive</span><br><span class="line">      --skip-old-files       don&#x27;t replace existing files when extracting,</span><br><span class="line">                             silently skip over them</span><br><span class="line">  -U, --unlink-first         remove each file prior to extracting over it</span><br><span class="line">  -W, --verify               attempt to verify the archive after writing it</span><br><span class="line"></span><br><span class="line"> Select output stream:</span><br><span class="line"></span><br><span class="line">      --ignore-command-error ignore exit codes of children</span><br><span class="line">      --no-ignore-command-error   treat non-zero exit codes of children as</span><br><span class="line">                             error</span><br><span class="line">  -O, --to-stdout            extract files to standard output</span><br><span class="line">      --to-command=COMMAND   pipe extracted files to another program</span><br><span class="line"></span><br><span class="line"> Handling of file attributes:</span><br><span class="line"></span><br><span class="line">      --atime-preserve[=METHOD]   preserve access times on dumped files, either</span><br><span class="line">                             by restoring the times after reading</span><br><span class="line">                             (METHOD=&#x27;replace&#x27;; default) or by not setting the</span><br><span class="line">                             times in the first place (METHOD=&#x27;system&#x27;)</span><br><span class="line">      --delay-directory-restore   delay setting modification times and</span><br><span class="line">                             permissions of extracted directories until the end</span><br><span class="line">                             of extraction</span><br><span class="line">      --group=NAME           force NAME as group for added files</span><br><span class="line">      --mode=CHANGES         force (symbolic) mode CHANGES for added files</span><br><span class="line">      --mtime=DATE-OR-FILE   set mtime for added files from DATE-OR-FILE</span><br><span class="line">  -m, --touch                don&#x27;t extract file modified time</span><br><span class="line">      --no-delay-directory-restore</span><br><span class="line">                             cancel the effect of --delay-directory-restore</span><br><span class="line">                             option</span><br><span class="line">      --no-same-owner        extract files as yourself (default for ordinary</span><br><span class="line">                             users)</span><br><span class="line">      --no-same-permissions  apply the user&#x27;s umask when extracting permissions</span><br><span class="line">                             from the archive (default for ordinary users)</span><br><span class="line">      --numeric-owner        always use numbers for user/group names</span><br><span class="line">      --owner=NAME           force NAME as owner for added files</span><br><span class="line">  -p, --preserve-permissions, --same-permissions</span><br><span class="line">                             extract information about file permissions</span><br><span class="line">                             (default for superuser)</span><br><span class="line">      --preserve             same as both -p and -s</span><br><span class="line">      --same-owner           try extracting files with the same ownership as</span><br><span class="line">                             exists in the archive (default for superuser)</span><br><span class="line">  -s, --preserve-order, --same-order</span><br><span class="line">                             member arguments are listed in the same order as</span><br><span class="line">                             the files in the archive</span><br><span class="line"></span><br><span class="line"> Handling of extended file attributes:</span><br><span class="line"></span><br><span class="line">      --acls                 Enable the POSIX ACLs support</span><br><span class="line">      --no-acls              Disable the POSIX ACLs support</span><br><span class="line">      --no-selinux           Disable the SELinux context support</span><br><span class="line">      --no-xattrs            Disable extended attributes support</span><br><span class="line">      --selinux              Enable the SELinux context support</span><br><span class="line">      --xattrs               Enable extended attributes support</span><br><span class="line">      --xattrs-exclude=MASK  specify the exclude pattern for xattr keys</span><br><span class="line">      --xattrs-include=MASK  specify the include pattern for xattr keys</span><br><span class="line"></span><br><span class="line"> Device selection and switching:</span><br><span class="line"></span><br><span class="line">  -f, --file=ARCHIVE         use archive file or device ARCHIVE</span><br><span class="line">      --force-local          archive file is local even if it has a colon</span><br><span class="line">  -F, --info-script=NAME, --new-volume-script=NAME</span><br><span class="line">                             run script at end of each tape (implies -M)</span><br><span class="line">  -L, --tape-length=NUMBER   change tape after writing NUMBER x 1024 bytes</span><br><span class="line">  -M, --multi-volume         create/list/extract multi-volume archive</span><br><span class="line">      --rmt-command=COMMAND  use given rmt COMMAND instead of rmt</span><br><span class="line">      --rsh-command=COMMAND  use remote COMMAND instead of rsh</span><br><span class="line">      --volno-file=FILE      use/update the volume number in FILE</span><br><span class="line"></span><br><span class="line"> Device blocking:</span><br><span class="line"></span><br><span class="line">  -b, --blocking-factor=BLOCKS   BLOCKS x 512 bytes per record</span><br><span class="line">  -B, --read-full-records    reblock as we read (for 4.2BSD pipes)</span><br><span class="line">  -i, --ignore-zeros         ignore zeroed blocks in archive (means EOF)</span><br><span class="line">      --record-size=NUMBER   NUMBER of bytes per record, multiple of 512</span><br><span class="line"></span><br><span class="line"> Archive format selection:</span><br><span class="line"></span><br><span class="line">  -H, --format=FORMAT        create archive of the given format</span><br><span class="line"></span><br><span class="line"> FORMAT is one of the following:</span><br><span class="line"></span><br><span class="line">    gnu                      GNU tar 1.13.x format</span><br><span class="line">    oldgnu                   GNU format as per tar &lt;= 1.12</span><br><span class="line">    pax                      POSIX 1003.1-2001 (pax) format</span><br><span class="line">    posix                    same as pax</span><br><span class="line">    ustar                    POSIX 1003.1-1988 (ustar) format</span><br><span class="line">    v7                       old V7 tar format</span><br><span class="line"></span><br><span class="line">      --old-archive, --portability</span><br><span class="line">                             same as --format=v7</span><br><span class="line">      --pax-option=keyword[[:]=value][,keyword[[:]=value]]...</span><br><span class="line">                             control pax keywords</span><br><span class="line">      --posix                same as --format=posix</span><br><span class="line">  -V, --label=TEXT           create archive with volume name TEXT; at</span><br><span class="line">                             list/extract time, use TEXT as a globbing pattern</span><br><span class="line">                             for volume name</span><br><span class="line"></span><br><span class="line"> Compression options:</span><br><span class="line"></span><br><span class="line">  -a, --auto-compress        use archive suffix to determine the compression</span><br><span class="line">                             program</span><br><span class="line">  -I, --use-compress-program=PROG</span><br><span class="line">                             filter through PROG (must accept -d)</span><br><span class="line">  -j, --bzip2                filter the archive through bzip2</span><br><span class="line">  -J, --xz                   filter the archive through xz</span><br><span class="line">      --lzip                 filter the archive through lzip</span><br><span class="line">      --lzma                 filter the archive through lzma</span><br><span class="line">      --lzop</span><br><span class="line">      --no-auto-compress     do not use archive suffix to determine the</span><br><span class="line">                             compression program</span><br><span class="line">  -z, --gzip, --gunzip, --ungzip   filter the archive through gzip</span><br><span class="line">  -Z, --compress, --uncompress   filter the archive through compress</span><br><span class="line"></span><br><span class="line"> Local file selection:</span><br><span class="line"></span><br><span class="line">      --add-file=FILE        add given FILE to the archive (useful if its name</span><br><span class="line">                             starts with a dash)</span><br><span class="line">      --backup[=CONTROL]     backup before removal, choose version CONTROL</span><br><span class="line">  -C, --directory=DIR        change to directory DIR</span><br><span class="line">      --exclude=PATTERN      exclude files, given as a PATTERN</span><br><span class="line">      --exclude-backups      exclude backup and lock files</span><br><span class="line">      --exclude-caches       exclude contents of directories containing</span><br><span class="line">                             CACHEDIR.TAG, except for the tag file itself</span><br><span class="line">      --exclude-caches-all   exclude directories containing CACHEDIR.TAG</span><br><span class="line">      --exclude-caches-under exclude everything under directories containing</span><br><span class="line">                             CACHEDIR.TAG</span><br><span class="line">      --exclude-tag=FILE     exclude contents of directories containing FILE,</span><br><span class="line">                             except for FILE itself</span><br><span class="line">      --exclude-tag-all=FILE exclude directories containing FILE</span><br><span class="line">      --exclude-tag-under=FILE   exclude everything under directories</span><br><span class="line">                             containing FILE</span><br><span class="line">      --exclude-vcs          exclude version control system directories</span><br><span class="line">  -h, --dereference          follow symlinks; archive and dump the files they</span><br><span class="line">                             point to</span><br><span class="line">      --hard-dereference     follow hard links; archive and dump the files they</span><br><span class="line">                             refer to</span><br><span class="line">  -K, --starting-file=MEMBER-NAME</span><br><span class="line">                             begin at member MEMBER-NAME when reading the</span><br><span class="line">                             archive</span><br><span class="line">      --newer-mtime=DATE     compare date and time when data changed only</span><br><span class="line">      --no-null              disable the effect of the previous --null option</span><br><span class="line">      --no-recursion         avoid descending automatically in directories</span><br><span class="line">      --no-unquote           do not unquote filenames read with -T</span><br><span class="line">      --null                 -T reads null-terminated names, disable -C</span><br><span class="line">  -N, --newer=DATE-OR-FILE, --after-date=DATE-OR-FILE</span><br><span class="line">                             only store files newer than DATE-OR-FILE</span><br><span class="line">      --one-file-system      stay in local file system when creating archive</span><br><span class="line">  -P, --absolute-names       don&#x27;t strip leading `/&#x27;s from file names</span><br><span class="line">      --recursion            recurse into directories (default)</span><br><span class="line">      --suffix=STRING        backup before removal, override usual suffix (&#x27;~&#x27;</span><br><span class="line">                             unless overridden by environment variable</span><br><span class="line">                             SIMPLE_BACKUP_SUFFIX)</span><br><span class="line">  -T, --files-from=FILE      get names to extract or create from FILE</span><br><span class="line">      --unquote              unquote filenames read with -T (default)</span><br><span class="line">  -X, --exclude-from=FILE    exclude patterns listed in FILE</span><br><span class="line"></span><br><span class="line"> File name transformations:</span><br><span class="line"></span><br><span class="line">      --strip-components=NUMBER   strip NUMBER leading components from file</span><br><span class="line">                             names on extraction</span><br><span class="line">      --transform=EXPRESSION, --xform=EXPRESSION</span><br><span class="line">                             use sed replace EXPRESSION to transform file</span><br><span class="line">                             names</span><br><span class="line"></span><br><span class="line"> File name matching options (affect both exclude and include patterns):</span><br><span class="line"></span><br><span class="line">      --anchored             patterns match file name start</span><br><span class="line">      --ignore-case          ignore case</span><br><span class="line">      --no-anchored          patterns match after any `/&#x27; (default for</span><br><span class="line">                             exclusion)</span><br><span class="line">      --no-ignore-case       case sensitive matching (default)</span><br><span class="line">      --no-wildcards         verbatim string matching</span><br><span class="line">      --no-wildcards-match-slash   wildcards do not match `/&#x27;</span><br><span class="line">      --wildcards            use wildcards (default)</span><br><span class="line">      --wildcards-match-slash   wildcards match `/&#x27; (default for exclusion)</span><br><span class="line"></span><br><span class="line"> Informative output:</span><br><span class="line"></span><br><span class="line">      --checkpoint[=NUMBER]  display progress messages every NUMBERth record</span><br><span class="line">                             (default 10)</span><br><span class="line">      --checkpoint-action=ACTION   execute ACTION on each checkpoint</span><br><span class="line">      --full-time            print file time to its full resolution</span><br><span class="line">      --index-file=FILE      send verbose output to FILE</span><br><span class="line">  -l, --check-links          print a message if not all links are dumped</span><br><span class="line">      --no-quote-chars=STRING   disable quoting for characters from STRING</span><br><span class="line">      --quote-chars=STRING   additionally quote characters from STRING</span><br><span class="line">      --quoting-style=STYLE  set name quoting style; see below for valid STYLE</span><br><span class="line">                             values</span><br><span class="line">  -R, --block-number         show block number within archive with each message</span><br><span class="line">                            </span><br><span class="line">      --show-defaults        show tar defaults</span><br><span class="line">      --show-omitted-dirs    when listing or extracting, list each directory</span><br><span class="line">                             that does not match search criteria</span><br><span class="line">      --show-transformed-names, --show-stored-names</span><br><span class="line">                             show file or archive names after transformation</span><br><span class="line">      --totals[=SIGNAL]      print total bytes after processing the archive;</span><br><span class="line">                             with an argument - print total bytes when this</span><br><span class="line">                             SIGNAL is delivered; Allowed signals are: SIGHUP,</span><br><span class="line">                             SIGQUIT, SIGINT, SIGUSR1 and SIGUSR2; the names</span><br><span class="line">                             without SIG prefix are also accepted</span><br><span class="line">      --utc                  print file modification times in UTC</span><br><span class="line">  -v, --verbose              verbosely list files processed</span><br><span class="line">      --warning=KEYWORD      warning control</span><br><span class="line">  -w, --interactive, --confirmation</span><br><span class="line">                             ask for confirmation for every action</span><br><span class="line"></span><br><span class="line"> Compatibility options:</span><br><span class="line"></span><br><span class="line">  -o                         when creating, same as --old-archive; when</span><br><span class="line">                             extracting, same as --no-same-owner</span><br><span class="line"></span><br><span class="line"> Other options:</span><br><span class="line"></span><br><span class="line">  -?, --help                 give this help list</span><br><span class="line">      --restrict             disable use of some potentially harmful options</span><br><span class="line">      --usage                give a short usage message</span><br><span class="line">      --version              print program version</span><br><span class="line"></span><br><span class="line">Mandatory or optional arguments to long options are also mandatory or optional</span><br><span class="line">for any corresponding short options.</span><br><span class="line"></span><br><span class="line">The backup suffix is `~&#x27;, unless set with --suffix or SIMPLE_BACKUP_SUFFIX.</span><br><span class="line">The version control may be set with --backup or VERSION_CONTROL, values are:</span><br><span class="line"></span><br><span class="line">  none, off       never make backups</span><br><span class="line">  t, numbered     make numbered backups</span><br><span class="line">  nil, existing   numbered if numbered backups exist, simple otherwise</span><br><span class="line">  never, simple   always make simple backups</span><br><span class="line"></span><br><span class="line">Valid arguments for the --quoting-style option are:</span><br><span class="line"></span><br><span class="line">  literal</span><br><span class="line">  shell</span><br><span class="line">  shell-always</span><br><span class="line">  c</span><br><span class="line">  c-maybe</span><br><span class="line">  escape</span><br><span class="line">  locale</span><br><span class="line">  clocale</span><br><span class="line"></span><br><span class="line">*This* tar defaults to:</span><br><span class="line">--format=gnu -f- -b20 --quoting-style=escape --rmt-command=/etc/rmt</span><br><span class="line">--rsh-command=/usr/bin/ssh</span><br><span class="line"></span><br><span class="line">Report bugs to &lt;bug-tar@gnu.org&gt;.</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/03/30/yum/" rel="prev" title="yum">
+                  <i class="fa fa-chevron-left"></i> yum
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GG</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
