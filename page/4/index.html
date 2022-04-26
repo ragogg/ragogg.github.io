@@ -129,7 +129,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -178,6 +178,132 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/network/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/30/network/" class="post-title-link" itemprop="url">network</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-30 20:50:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-26 08:48:29" itemprop="dateModified" datetime="2022-04-26T08:48:29+08:00">2022-04-26</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h1><p>注：这些参数值不区分大小写，不区分单引号和双引号，甚至可以不用引号。</p>
+<ul>
+<li>TYPE：配置文件接口类型。在/etc/sysconfig/network-scripts/目录有多种网络配置文件，有 Ethernet 、IPsec 等类型，网络接口类型为 Ethernet。</li>
+<li>DEVICE：网络接口名称</li>
+<li>BOOTPROTO：系统启动地址协议<ul>
+<li>none：不使用启动地址协议</li>
+<li>bootp：BOOTP协议</li>
+<li>dhcp：DHCP动态地址协议</li>
+<li>static：静态地址协议</li>
+</ul>
+</li>
+<li>ONBOOT：系统启动时是否激活<ul>
+<li>yes：系统启动时激活该网络接口</li>
+<li>no：系统启动时不激活该网络接口</li>
+</ul>
+</li>
+<li>IPADDR：IP地址</li>
+<li>NETMASK：子网掩码</li>
+<li>GATEWAY：网关地址</li>
+<li>BROADCAST：广播地址</li>
+<li>HWADDR/MACADDR：MAC地址。只需设置其中一个，同时设置时不能相互冲突。</li>
+<li>PEERDNS：是否指定DNS。如果使用DHCP协议，默认为yes。<ul>
+<li>yes：如果DNS设置，修改/etc/resolv.conf中的DNS</li>
+<li>no：不修改/etc/resolv.conf中的DNS</li>
+</ul>
+</li>
+<li>DNS{1, 2}：DNS地址。当PEERDNS为yes时会被写入/etc/resolv.conf中。</li>
+<li>NM_CONTROLLED：是否由Network Manager控制该网络接口。修改保存后立即生效，无需重启。被其坑过几次，建议一般设为no。<ul>
+<li>yes：由Network Manager控制</li>
+<li>no：不由Network Manager控制</li>
+</ul>
+</li>
+<li>USERCTL：用户权限控制<ul>
+<li>yes：非root用户允许控制该网络接口</li>
+<li>no：非root用户不允许控制该网络接口</li>
+</ul>
+</li>
+<li>IPV6INIT：是否执行IPv6<ul>
+<li>yes：支持IPv6</li>
+<li>no：不支持IPv6</li>
+</ul>
+</li>
+<li>IPV6ADDR：IPv6地址/前缀长度</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/30/network/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/nodejs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -214,7 +340,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-21 20:44:27" itemprop="dateModified" datetime="2022-04-21T20:44:27+08:00">2022-04-21</time>
+      <time title="修改时间：2022-04-26 08:48:29" itemprop="dateModified" datetime="2022-04-26T08:48:29+08:00">2022-04-26</time>
     </span>
 
   
@@ -297,7 +423,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-21 20:44:27" itemprop="dateModified" datetime="2022-04-21T20:44:27+08:00">2022-04-21</time>
+      <time title="修改时间：2022-04-26 08:48:29" itemprop="dateModified" datetime="2022-04-26T08:48:29+08:00">2022-04-26</time>
     </span>
 
   
@@ -382,7 +508,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-21 20:44:27" itemprop="dateModified" datetime="2022-04-21T20:44:27+08:00">2022-04-21</time>
+      <time title="修改时间：2022-04-26 08:48:29" itemprop="dateModified" datetime="2022-04-26T08:48:29+08:00">2022-04-26</time>
     </span>
 
   
@@ -473,7 +599,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-21 20:44:27" itemprop="dateModified" datetime="2022-04-21T20:44:27+08:00">2022-04-21</time>
+      <time title="修改时间：2022-04-26 08:48:29" itemprop="dateModified" datetime="2022-04-26T08:48:29+08:00">2022-04-26</time>
     </span>
 
   
@@ -489,91 +615,6 @@
           <h1 id="磁盘空间"><a href="#磁盘空间" class="headerlink" title="磁盘空间"></a>磁盘空间</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看磁盘利用率</span></span><br><span class="line"><span class="built_in">df</span> -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看 rootvg 卷组的详细信息及状态</span></span><br><span class="line">lsvg rootvg</span><br><span class="line"></span><br><span class="line"><span class="comment"># 增加容量</span></span><br><span class="line">chfs -a size=+10G /u01</span><br></pre></td></tr></table></figure>
 
 <h1 id="修改系统设置（时间）"><a href="#修改系统设置（时间）" class="headerlink" title="修改系统设置（时间）"></a>修改系统设置（时间）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smitty</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/Docker/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="GG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/30/Docker/" class="post-title-link" itemprop="url">Docker</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-30 20:45:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:45:00+08:00">2022-03-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-21 20:44:27" itemprop="dateModified" datetime="2022-04-21T20:44:27+08:00">2022-04-21</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="CentOS-RHEL-下载-Docker-源文件"><a href="#CentOS-RHEL-下载-Docker-源文件" class="headerlink" title="CentOS/RHEL 下载 Docker 源文件"></a>CentOS/RHEL 下载 Docker 源文件</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-
-<h1 id="把软件仓库地址替换为腾讯源"><a href="#把软件仓库地址替换为腾讯源" class="headerlink" title="把软件仓库地址替换为腾讯源"></a>把软件仓库地址替换为腾讯源</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i <span class="string">&#x27;s+download.docker.com+mirrors.cloud.tencent.com/docker-ce+&#x27;</span> /etc/yum.repos.d/docker-ce.repo</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/30/Docker/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
