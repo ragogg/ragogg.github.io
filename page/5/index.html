@@ -129,7 +129,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -178,6 +178,384 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/netstat/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/30/netstat/" class="post-title-link" itemprop="url">netstat</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-30 20:50:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-08-29 09:01:59" itemprop="dateModified" datetime="2023-08-29T09:01:59+08:00">2023-08-29</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="netstat-命令"><a href="#netstat-命令" class="headerlink" title="netstat 命令"></a>netstat 命令</h1><p><code>netstat</code> 用于显示网络状态</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat [-acCeFghilMnNoprstuvVwx][-A&lt;网络类型&gt;][--ip]</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/30/netstat/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/network/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/30/network/" class="post-title-link" itemprop="url">network</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-30 20:50:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-08-29 09:01:59" itemprop="dateModified" datetime="2023-08-29T09:01:59+08:00">2023-08-29</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h1><p>注：这些参数值不区分大小写，不区分单引号和双引号，甚至可以不用引号。</p>
+<ul>
+<li>TYPE：配置文件接口类型。在/etc/sysconfig/network-scripts/目录有多种网络配置文件，有 Ethernet 、IPsec 等类型，网络接口类型为 Ethernet。</li>
+<li>DEVICE：网络接口名称</li>
+<li>BOOTPROTO：系统启动地址协议<ul>
+<li>none：不使用启动地址协议</li>
+<li>bootp：BOOTP协议</li>
+<li>dhcp：DHCP动态地址协议</li>
+<li>static：静态地址协议</li>
+</ul>
+</li>
+<li>ONBOOT：系统启动时是否激活<ul>
+<li>yes：系统启动时激活该网络接口</li>
+<li>no：系统启动时不激活该网络接口</li>
+</ul>
+</li>
+<li>IPADDR：IP地址</li>
+<li>NETMASK：子网掩码</li>
+<li>GATEWAY：网关地址</li>
+<li>BROADCAST：广播地址</li>
+<li>HWADDR/MACADDR：MAC地址。只需设置其中一个，同时设置时不能相互冲突。</li>
+<li>PEERDNS：是否指定DNS。如果使用DHCP协议，默认为yes。<ul>
+<li>yes：如果DNS设置，修改/etc/resolv.conf中的DNS</li>
+<li>no：不修改/etc/resolv.conf中的DNS</li>
+</ul>
+</li>
+<li>DNS{1, 2}：DNS地址。当PEERDNS为yes时会被写入/etc/resolv.conf中。</li>
+<li>NM_CONTROLLED：是否由Network Manager控制该网络接口。修改保存后立即生效，无需重启。被其坑过几次，建议一般设为no。<ul>
+<li>yes：由Network Manager控制</li>
+<li>no：不由Network Manager控制</li>
+</ul>
+</li>
+<li>USERCTL：用户权限控制<ul>
+<li>yes：非root用户允许控制该网络接口</li>
+<li>no：非root用户不允许控制该网络接口</li>
+</ul>
+</li>
+<li>IPV6INIT：是否执行IPv6<ul>
+<li>yes：支持IPv6</li>
+<li>no：不支持IPv6</li>
+</ul>
+</li>
+<li>IPV6ADDR：IPv6地址/前缀长度</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/30/network/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/nodejs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/30/nodejs/" class="post-title-link" itemprop="url">Node.js</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-30 20:50:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-08-29 09:01:59" itemprop="dateModified" datetime="2023-08-29T09:01:59+08:00">2023-08-29</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="解压-nodejs-包"><a href="#解压-nodejs-包" class="headerlink" title="解压 nodejs 包"></a>解压 nodejs 包</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">root@ox [11:07:30 PM] [~/Downloads] </span><br><span class="line">-&gt; <span class="comment"># ls -la</span></span><br><span class="line">total 20896</span><br><span class="line">drwxr-xr-x.  2 root root       44 Apr 25 23:06 .</span><br><span class="line">dr-xr-x---. 17 root root     4096 Apr 25 23:07 ..</span><br><span class="line">-rwxrw-rw-.  1 root root 21391564 Apr 25 11:32 node-v14.16.1-linux-x64.tar.xz</span><br><span class="line">root@ox [11:07:46 PM] [~/Downloads] </span><br><span class="line">-&gt; <span class="comment"># tar -xvf node-v14.16.1-linux-x64.tar.xz</span></span><br><span class="line">...</span><br><span class="line">···</span><br><span class="line">root@ox [11:19:26 PM] [~/Downloads] </span><br><span class="line">-&gt; <span class="comment"># ll</span></span><br><span class="line">total 21M</span><br><span class="line">-rwxrw-rw-. 1 root root 21M Apr 25 11:32 node-v14.16.1-linux-x64.tar.xz</span><br><span class="line">drwxr-xr-x. 6 1001 1001 108 Apr  7 01:28 node-v14.16.1-linux-x64</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/30/nodejs/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/shell/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/30/shell/" class="post-title-link" itemprop="url">Shell</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-30 20:50:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-08-29 09:01:59" itemprop="dateModified" datetime="2023-08-29T09:01:59+08:00">2023-08-29</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="查看当前使用的-shell"><a href="#查看当前使用的-shell" class="headerlink" title="查看当前使用的 shell"></a>查看当前使用的 shell</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># echo $SHELL</span></span><br><span class="line">/bin/bash</span><br></pre></td></tr></table></figure>
+
+<h1 id="查看系统中已安装的-shell"><a href="#查看系统中已安装的-shell" class="headerlink" title="查看系统中已安装的 shell"></a>查看系统中已安装的 shell</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># cat /etc/shells</span></span><br><span class="line">/bin/sh</span><br><span class="line">/bin/bash</span><br><span class="line">/usr/bin/sh</span><br><span class="line">/usr/bin/bash</span><br><span class="line">/bin/tcsh</span><br><span class="line">/bin/csh</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/30/shell/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/MySQL%20-%20CentOS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -214,7 +592,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-29 08:49:29" itemprop="dateModified" datetime="2023-08-29T08:49:29+08:00">2023-08-29</time>
+      <time title="修改时间：2023-08-29 09:01:59" itemprop="dateModified" datetime="2023-08-29T09:01:59+08:00">2023-08-29</time>
     </span>
 
   
@@ -261,334 +639,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/AIX/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="GG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/30/AIX/" class="post-title-link" itemprop="url">AIX</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-30 20:45:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:45:00+08:00">2022-03-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-29 08:49:29" itemprop="dateModified" datetime="2023-08-29T08:49:29+08:00">2023-08-29</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="磁盘空间"><a href="#磁盘空间" class="headerlink" title="磁盘空间"></a>磁盘空间</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看磁盘利用率</span></span><br><span class="line"><span class="built_in">df</span> -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看 rootvg 卷组的详细信息及状态</span></span><br><span class="line">lsvg rootvg</span><br><span class="line"></span><br><span class="line"><span class="comment"># 增加容量</span></span><br><span class="line">chfs -a size=+10G /u01</span><br></pre></td></tr></table></figure>
-
-<h1 id="修改系统设置（时间）"><a href="#修改系统设置（时间）" class="headerlink" title="修改系统设置（时间）"></a>修改系统设置（时间）</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smitty</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/Docker/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="GG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/30/Docker/" class="post-title-link" itemprop="url">Docker</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-30 20:45:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:45:00+08:00">2022-03-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-29 08:49:29" itemprop="dateModified" datetime="2023-08-29T08:49:29+08:00">2023-08-29</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="CentOS-RHEL-下载-Docker-源文件"><a href="#CentOS-RHEL-下载-Docker-源文件" class="headerlink" title="CentOS/RHEL 下载 Docker 源文件"></a>CentOS/RHEL 下载 Docker 源文件</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-
-<h1 id="把软件仓库地址替换为腾讯源"><a href="#把软件仓库地址替换为腾讯源" class="headerlink" title="把软件仓库地址替换为腾讯源"></a>把软件仓库地址替换为腾讯源</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i <span class="string">&#x27;s+download.docker.com+mirrors.cloud.tencent.com/docker-ce+&#x27;</span> /etc/yum.repos.d/docker-ce.repo</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/30/Docker/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/Hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="GG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/30/Hexo/" class="post-title-link" itemprop="url">Hexo</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-30 20:45:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:45:00+08:00">2022-03-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-29 08:49:29" itemprop="dateModified" datetime="2023-08-29T08:49:29+08:00">2023-08-29</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">root@ox [11:49:31 PM] [~] </span><br><span class="line">-&gt; <span class="comment"># npm install hexo-cli -g</span></span><br><span class="line">/usr/local/node/v14.16.1/bin/hexo -&gt; /usr/local/node/v14.16.1/lib/node_modules/hexo-cli/bin/hexo</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.1 (node_modules/hexo-cli/node_modules/chokidar/node_modules/fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="keyword">for</span> fsevents@2.3.2: wanted &#123;<span class="string">&quot;os&quot;</span>:<span class="string">&quot;darwin&quot;</span>,<span class="string">&quot;arch&quot;</span>:<span class="string">&quot;any&quot;</span>&#125; (current: &#123;<span class="string">&quot;os&quot;</span>:<span class="string">&quot;linux&quot;</span>,<span class="string">&quot;arch&quot;</span>:<span class="string">&quot;x64&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line">+ hexo-cli@4.2.0</span><br><span class="line">added 65 packages from 53 contributors <span class="keyword">in</span> 71.217s</span><br><span class="line">root@ox [11:52:01 PM] [~] </span><br><span class="line">-&gt; <span class="comment"># hexo version</span></span><br><span class="line">hexo-cli: 4.2.0</span><br><span class="line">os: Linux 3.10.0-1160.el7.x86_64 linux x64</span><br><span class="line">node: 14.16.1</span><br><span class="line">v8: 8.4.371.19-node.18</span><br><span class="line">uv: 1.40.0</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.9</span><br><span class="line">ares: 1.16.1</span><br><span class="line">modules: 83</span><br><span class="line">nghttp2: 1.41.0</span><br><span class="line">napi: 7</span><br><span class="line">llhttp: 2.1.3</span><br><span class="line">openssl: 1.1.1k</span><br><span class="line">cldr: 37.0</span><br><span class="line">icu: 67.1</span><br><span class="line">tz: 2020a</span><br><span class="line">unicode: 13.0</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/30/Hexo/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/Java/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="GG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/30/Java/" class="post-title-link" itemprop="url">Java</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-30 20:45:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:45:00+08:00">2022-03-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-29 08:49:29" itemprop="dateModified" datetime="2023-08-29T08:49:29+08:00">2023-08-29</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="卸载-CentOS-自带-Java"><a href="#卸载-CentOS-自带-Java" class="headerlink" title="卸载 CentOS 自带 Java"></a>卸载 CentOS 自带 Java</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">[22:12:54] root :: sun  ➜  ~ » rpm -qa|grep java</span><br><span class="line">java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64</span><br><span class="line">javapackages-tools-3.4.1-11.el7.noarch</span><br><span class="line">tzdata-java-2020a-1.el7.noarch</span><br><span class="line">python-javapackages-3.4.1-11.el7.noarch</span><br><span class="line">java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.x86_64</span><br><span class="line">[22:13:44] root :: sun  ➜  ~ » yum -y remove java-1.8.0-openjdk-headless.x86_64 </span><br><span class="line">Loaded plugins: fastestmirror, langpacks</span><br><span class="line">Resolving Dependencies</span><br><span class="line"> Running transaction check</span><br><span class="line"> Package java-1.8.0-openjdk-headless.x86_64 1:1.8.0.262.b10-1.el7 will be erased</span><br><span class="line"> Processing Dependency: java-1.8.0-openjdk-headless(x86-64) = 1:1.8.0.262.b10-1.el7 <span class="keyword">for</span> package: 1:java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64</span><br><span class="line"> Processing Dependency: libjava.so()(64bit) <span class="keyword">for</span> package: 1:java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64</span><br><span class="line"> Processing Dependency: libjava.so(SUNWprivate_1.1)(64bit) <span class="keyword">for</span> package: 1:java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64</span><br><span class="line"> Processing Dependency: libjvm.so()(64bit) <span class="keyword">for</span> package: 1:java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64</span><br><span class="line"> Processing Dependency: libjvm.so(SUNWprivate_1.1)(64bit) <span class="keyword">for</span> package: 1:java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64</span><br><span class="line"> Running transaction check</span><br><span class="line"> Package java-1.8.0-openjdk.x86_64 1:1.8.0.262.b10-1.el7 will be erased</span><br><span class="line"> Processing Dependency: java &gt;= 1.5 <span class="keyword">for</span> package: jline-1.0-8.el7.noarch</span><br><span class="line"> Processing Dependency: java-1.8.0-openjdk <span class="keyword">for</span> package: icedtea-web-1.7.1-2.el7_6.x86_64</span><br><span class="line"> Running transaction check</span><br><span class="line"> Package icedtea-web.x86_64 0:1.7.1-2.el7_6 will be erased</span><br><span class="line"> Package jline.noarch 0:1.0-8.el7 will be erased</span><br><span class="line"> Processing Dependency: jline <span class="keyword">for</span> package: rhino-1.7R5-1.el7.noarch</span><br><span class="line"> Running transaction check</span><br><span class="line"> Package rhino.noarch 0:1.7R5-1.el7 will be erased</span><br><span class="line"> Finished Dependency Resolution</span><br><span class="line"></span><br><span class="line">Dependencies Resolved</span><br><span class="line"></span><br><span class="line">========================================================================================================</span><br><span class="line"> Package                            Arch          Version                        Repository        Size</span><br><span class="line">========================================================================================================</span><br><span class="line">Removing:</span><br><span class="line"> java-1.8.0-openjdk-headless        x86_64        1:1.8.0.262.b10-1.el7          @anaconda        109 M</span><br><span class="line">Removing <span class="keyword">for</span> dependencies:</span><br><span class="line"> icedtea-web                        x86_64        1.7.1-2.el7_6                  @anaconda        2.3 M</span><br><span class="line"> java-1.8.0-openjdk                 x86_64        1:1.8.0.262.b10-1.el7          @anaconda        646 k</span><br><span class="line"> jline                              noarch        1.0-8.el7                      @anaconda         72 k</span><br><span class="line"> rhino                              noarch        1.7R5-1.el7                    @anaconda        1.1 M</span><br><span class="line"></span><br><span class="line">Transaction Summary</span><br><span class="line">========================================================================================================</span><br><span class="line">Remove  1 Package (+4 Dependent packages)</span><br><span class="line"></span><br><span class="line">Installed size: 113 M</span><br><span class="line">Downloading packages:</span><br><span class="line">Running transaction check</span><br><span class="line">Running transaction <span class="built_in">test</span></span><br><span class="line">Transaction <span class="built_in">test</span> succeeded</span><br><span class="line">Running transaction</span><br><span class="line">  Erasing    : icedtea-web-1.7.1-2.el7_6.x86_64                                                     1/5 </span><br><span class="line">  Erasing    : rhino-1.7R5-1.el7.noarch                                                             2/5 </span><br><span class="line">  Erasing    : jline-1.0-8.el7.noarch                                                               3/5 </span><br><span class="line">  Erasing    : 1:java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64                                      4/5 </span><br><span class="line">  Erasing    : 1:java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.x86_64                             5/5 </span><br><span class="line">  Verifying  : 1:java-1.8.0-openjdk-headless-1.8.0.262.b10-1.el7.x86_64                             1/5 </span><br><span class="line">  Verifying  : 1:java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64                                      2/5 </span><br><span class="line">  Verifying  : rhino-1.7R5-1.el7.noarch                                                             3/5 </span><br><span class="line">  Verifying  : icedtea-web-1.7.1-2.el7_6.x86_64                                                     4/5 </span><br><span class="line">  Verifying  : jline-1.0-8.el7.noarch                                                               5/5 </span><br><span class="line"></span><br><span class="line">Removed:</span><br><span class="line">  java-1.8.0-openjdk-headless.x86_64 1:1.8.0.262.b10-1.el7                                              </span><br><span class="line"></span><br><span class="line">Dependency Removed:</span><br><span class="line">  icedtea-web.x86_64 0:1.7.1-2.el7_6           java-1.8.0-openjdk.x86_64 1:1.8.0.262.b10-1.el7          </span><br><span class="line">  jline.noarch 0:1.0-8.el7                     rhino.noarch 0:1.7R5-1.el7                               </span><br><span class="line"></span><br><span class="line">Complete!</span><br><span class="line">[22:14:08] root :: sun  ➜  ~ » </span><br><span class="line">[22:14:09] root :: sun  ➜  ~ » </span><br><span class="line">[22:14:09] root :: sun  ➜  ~ » rpm -qa|grep java                               </span><br><span class="line">javapackages-tools-3.4.1-11.el7.noarch</span><br><span class="line">tzdata-java-2020a-1.el7.noarch</span><br><span class="line">python-javapackages-3.4.1-11.el7.noarch</span><br></pre></td></tr></table></figure>
-
-<h1 id="配置-Java-环境"><a href="#配置-Java-环境" class="headerlink" title="配置 Java 环境"></a>配置 Java 环境</h1><p>编辑 <code>~/.bashrc</code> 文件，添加：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ---------- PATH ----------</span></span><br><span class="line"><span class="comment"># PATH for java.</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/local/bin/java/jdk1.8.0_231</span><br><span class="line"><span class="built_in">export</span> JRE_HOME=<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib:<span class="variable">$&#123;JRE_HOME&#125;</span>/lib</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-
-<p><code>source ~/.bashrc</code> 使修改生效</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
