@@ -129,7 +129,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -178,6 +178,108 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/Linux%20Filesystem%20Hierarchy%20Standard/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/30/Linux%20Filesystem%20Hierarchy%20Standard/" class="post-title-link" itemprop="url">Linux Filesystem Hierarchy Standard</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-03-30 20:50:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-03-16 11:13:21" itemprop="dateModified" datetime="2024-03-16T11:13:21+08:00">2024-03-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="EN"><a href="#EN" class="headerlink" title="EN"></a>EN</h1><h2 id="The-Root-Filesystem"><a href="#The-Root-Filesystem" class="headerlink" title="The Root Filesystem"></a>The Root Filesystem</h2><p>The contents of the root filesystem must be adequate to boot, restore, recover, and/or repair the system.</p>
+<p>To boot a system, enough software and data must be present on the root partition to mount other filesystems. This includes utilities, configuration, boot loader information, and other essential start-up data. /usr, /opt, and /var are designed such that they may be located on other partitions or filesystems.</p>
+<p>To enable recovery and/or repair of a system, those utilities needed by an experienced maintainer to diagnose and reconstruct a damaged system must be present on the root filesystem.</p>
+<p>To restore a system, those utilities needed to restore from system backups (on floppy, tape, etc.) must be present on the root filesystem.</p>
+<ul>
+<li>/bin : Essential user command binaries (for use by all users)</li>
+<li>/boot : Static files of the boot loader</li>
+<li>/dev : Device files</li>
+<li>/etc : Host-specific system configuration</li>
+<li>/home : User home directories (optional)</li>
+<li>/lib : Essential shared libraries and kernel modules</li>
+<li>/lib : Alternate format essential shared libraries (optional)</li>
+<li>/media : Mount point for removable media</li>
+<li>/mnt : Mount point for a temporarily mounted filesystem</li>
+<li>/root : Home directory for the root user (optional)</li>
+<li>/run : Run-time variable data</li>
+<li>/sbin : System binaries</li>
+<li>/srv : Data for services provided by this system</li>
+<li>/tmp : Temporary files</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/30/Linux%20Filesystem%20Hierarchy%20Standard/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/MySQL%20-%20Ubuntu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -214,7 +316,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-16 11:11:08" itemprop="dateModified" datetime="2024-03-16T11:11:08+08:00">2024-03-16</time>
+      <time title="修改时间：2024-03-16 11:13:21" itemprop="dateModified" datetime="2024-03-16T11:13:21+08:00">2024-03-16</time>
     </span>
 
   
@@ -299,7 +401,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-16 11:11:08" itemprop="dateModified" datetime="2024-03-16T11:11:08+08:00">2024-03-16</time>
+      <time title="修改时间：2024-03-16 11:13:21" itemprop="dateModified" datetime="2024-03-16T11:13:21+08:00">2024-03-16</time>
     </span>
 
   
@@ -393,7 +495,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-16 11:11:08" itemprop="dateModified" datetime="2024-03-16T11:11:08+08:00">2024-03-16</time>
+      <time title="修改时间：2024-03-16 11:13:21" itemprop="dateModified" datetime="2024-03-16T11:13:21+08:00">2024-03-16</time>
     </span>
 
   
@@ -481,7 +583,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-16 11:11:08" itemprop="dateModified" datetime="2024-03-16T11:11:08+08:00">2024-03-16</time>
+      <time title="修改时间：2024-03-16 11:13:21" itemprop="dateModified" datetime="2024-03-16T11:13:21+08:00">2024-03-16</time>
     </span>
 
   
@@ -499,132 +601,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/03/30/netstat/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2022/03/30/network/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="GG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/30/network/" class="post-title-link" itemprop="url">network</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-30 20:50:00" itemprop="dateCreated datePublished" datetime="2022-03-30T20:50:00+08:00">2022-03-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-16 11:11:08" itemprop="dateModified" datetime="2024-03-16T11:11:08+08:00">2024-03-16</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h1><p>注：这些参数值不区分大小写，不区分单引号和双引号，甚至可以不用引号。</p>
-<ul>
-<li>TYPE：配置文件接口类型。在/etc/sysconfig/network-scripts/目录有多种网络配置文件，有 Ethernet 、IPsec 等类型，网络接口类型为 Ethernet。</li>
-<li>DEVICE：网络接口名称</li>
-<li>BOOTPROTO：系统启动地址协议<ul>
-<li>none：不使用启动地址协议</li>
-<li>bootp：BOOTP协议</li>
-<li>dhcp：DHCP动态地址协议</li>
-<li>static：静态地址协议</li>
-</ul>
-</li>
-<li>ONBOOT：系统启动时是否激活<ul>
-<li>yes：系统启动时激活该网络接口</li>
-<li>no：系统启动时不激活该网络接口</li>
-</ul>
-</li>
-<li>IPADDR：IP地址</li>
-<li>NETMASK：子网掩码</li>
-<li>GATEWAY：网关地址</li>
-<li>BROADCAST：广播地址</li>
-<li>HWADDR/MACADDR：MAC地址。只需设置其中一个，同时设置时不能相互冲突。</li>
-<li>PEERDNS：是否指定DNS。如果使用DHCP协议，默认为yes。<ul>
-<li>yes：如果DNS设置，修改/etc/resolv.conf中的DNS</li>
-<li>no：不修改/etc/resolv.conf中的DNS</li>
-</ul>
-</li>
-<li>DNS{1, 2}：DNS地址。当PEERDNS为yes时会被写入/etc/resolv.conf中。</li>
-<li>NM_CONTROLLED：是否由Network Manager控制该网络接口。修改保存后立即生效，无需重启。被其坑过几次，建议一般设为no。<ul>
-<li>yes：由Network Manager控制</li>
-<li>no：不由Network Manager控制</li>
-</ul>
-</li>
-<li>USERCTL：用户权限控制<ul>
-<li>yes：非root用户允许控制该网络接口</li>
-<li>no：非root用户不允许控制该网络接口</li>
-</ul>
-</li>
-<li>IPV6INIT：是否执行IPv6<ul>
-<li>yes：支持IPv6</li>
-<li>no：不支持IPv6</li>
-</ul>
-</li>
-<li>IPV6ADDR：IPv6地址/前缀长度</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/30/network/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

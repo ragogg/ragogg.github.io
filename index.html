@@ -129,7 +129,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -178,6 +178,136 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2024/03/16/XiaoMiR3G/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="GG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/03/16/XiaoMiR3G/" class="post-title-link" itemprop="url">小米 R3G 路由器刷 openwrt 固件</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-03-16 11:00:00 / 修改时间：11:13:21" itemprop="dateCreated datePublished" datetime="2024-03-16T11:00:00+08:00">2024-03-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="更新开发者版本固件"><a href="#更新开发者版本固件" class="headerlink" title="更新开发者版本固件"></a>更新开发者版本固件</h1><ul>
+<li>固件下载地址：<a target="_blank" rel="noopener" href="https://www.miwifi.com/miwifi_download.html">https://www.miwifi.com/miwifi_download.html</a></li>
+<li>选择 ROM 页面</li>
+<li>下载“小米路由器3G 稳定版”和“小米路由器3G 开发版”固件</li>
+<li>访问小米路由器后台，刷入固件。路由器后台地址：<a target="_blank" rel="noopener" href="http://192.168.31.1/">http://192.168.31.1</a></li>
+</ul>
+<h2 id="更新至最新的官方稳定版固件"><a href="#更新至最新的官方稳定版固件" class="headerlink" title="更新至最新的官方稳定版固件"></a>更新至最新的官方稳定版固件</h2><ul>
+<li>文件：miwifi_r3g_firmware_9be74_2.28.44.bin</li>
+<li>系统版本：2.28.44</li>
+</ul>
+<h2 id="更新至官方的开发者版本固件"><a href="#更新至官方的开发者版本固件" class="headerlink" title="更新至官方的开发者版本固件"></a>更新至官方的开发者版本固件</h2><ul>
+<li>文件：miwifi_r3g_firmware_12f97_2.25.124.bin</li>
+<li>系统版本：2.25.124</li>
+</ul>
+<h1 id="开启-ssh-权限"><a href="#开启-ssh-权限" class="headerlink" title="开启 ssh 权限"></a>开启 <code>ssh</code> 权限</h1><ul>
+<li>下载 MiWiFi App，登录小米账号</li>
+<li>绑定 小米路由器 至 小米账号</li>
+<li>在小米开放平台申请 <code>ssh</code> 权限，小米开放平台地址：<a target="_blank" rel="noopener" href="https://www.miwifi.com/miwifi_open.html">https://www.miwifi.com/miwifi_open.html</a></li>
+<li>下载工具包，每台路由器对应的 miwifi_ssh.bin 文件不一样，不通用</li>
+</ul>
+<h2 id="开启流程"><a href="#开启流程" class="headerlink" title="开启流程"></a>开启流程</h2><ul>
+<li>确保 U 盘是 FAT 或者 FAT32 格式</li>
+<li>将 miwifi_ssh.bin 文件放入 U 盘根目录</li>
+<li>断开路由器电源，插上 U 盘，按住 reset 按钮，重新插电启动路由器，等待指示灯变成黄色闪烁状态，松开 reset 按钮</li>
+<li>等待路由器重启</li>
+</ul>
+<h2 id="ssh-进入路由器"><a href="#ssh-进入路由器" class="headerlink" title="ssh 进入路由器"></a>ssh 进入路由器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-dss -oCiphers=+3des-cbc root@192.168.31.1</span><br></pre></td></tr></table></figure>
+
+<h1 id="刷入-breed-引导"><a href="#刷入-breed-引导" class="headerlink" title="刷入 breed 引导"></a>刷入 breed 引导</h1><ul>
+<li>breed 固件下载地址：<a target="_blank" rel="noopener" href="https://breed.hackpascal.net/">https://breed.hackpascal.net/</a></li>
+<li>下载 breed-mt7621-xiaomi-r3g.bin 文件</li>
+<li>将 U 盘拔出，在 U 盘新建 Breed 目录，将下载的 breed-mt7621-xiaomi-r3g.bin 文件放入 U 盘 Breed 目录</li>
+<li>将 U 盘插回路由器</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-dss -oCiphers=+3des-cbc root@192.168.31.1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mtd write -r /extdisks/sda1/Breed/breed-mt7621-xiaomi-r3g.bin Bootloader</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@XiaoQiang:/<span class="comment"># cd /extdisks/sda1/Breed</span></span><br><span class="line">root@XiaoQiang:/extdisks/sda1/Breed<span class="comment"># mtd write -r /extdisks/sda1/Breed/breed-mt7621-xiaomi-r3g.bin Bootloader</span></span><br><span class="line">Unlocking Bootloader ...</span><br><span class="line"></span><br><span class="line">Writing from /extdisks/sda1/Breed/breed-mt7621-xiaomi-r3g.bin to Bootloader ...</span><br><span class="line">Rebooting ...</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>路由器重启，并且开始闪烁蓝灯</li>
+<li>访问 breed 后台，地址：<a target="_blank" rel="noopener" href="http://192.168.1.1/">http://192.168.1.1</a></li>
+</ul>
+<h1 id="刷入-openwrt-固件"><a href="#刷入-openwrt-固件" class="headerlink" title="刷入 openwrt 固件"></a>刷入 openwrt 固件</h1><ul>
+<li>访问 breed 后台，地址：<a target="_blank" rel="noopener" href="http://192.168.1.1/">http://192.168.1.1</a></li>
+<li>环境变量变量编辑，删除 normal_firmware_md5，增加下面内容：<ul>
+<li>字段：xiaomi.r3g.bootfw</li>
+<li>值：2</li>
+</ul>
+</li>
+<li>上传 openwrt 固件</li>
+<li>刷入 openwrt</li>
+<li>重启，刷入完成</li>
+<li>访问 openwrt 后台，地址：<a target="_blank" rel="noopener" href="http://192.168.1.1/">http://192.168.1.1</a></li>
+</ul>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://openwrt.org/toh/xiaomi/mir3g">Xiaomi Mi WiFi R3G (Mi Wifi Router 3G / MIR3G / MI3G / R4A Gigabit)</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/525244300">小米R3G路由器刷入openwrt</a></li>
+</ul>
+<p>normal_firmware_md5<br>4e166618cd0d7282feeebabadcdd8d3b</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2024/03/09/macOS%20%E7%BC%96%E8%AF%91%20OpenWrt/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -214,7 +344,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-16 11:11:08" itemprop="dateModified" datetime="2024-03-16T11:11:08+08:00">2024-03-16</time>
+      <time title="修改时间：2024-03-16 11:13:21" itemprop="dateModified" datetime="2024-03-16T11:13:21+08:00">2024-03-16</time>
     </span>
 
   
@@ -369,7 +499,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-16 11:11:08" itemprop="dateModified" datetime="2024-03-16T11:11:08+08:00">2024-03-16</time>
+      <time title="修改时间：2024-03-16 11:13:21" itemprop="dateModified" datetime="2024-03-16T11:13:21+08:00">2024-03-16</time>
     </span>
 
   
@@ -452,7 +582,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-16 11:11:08" itemprop="dateModified" datetime="2024-03-16T11:11:08+08:00">2024-03-16</time>
+      <time title="修改时间：2024-03-16 11:13:21" itemprop="dateModified" datetime="2024-03-16T11:13:21+08:00">2024-03-16</time>
     </span>
 
   
@@ -527,7 +657,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-16 11:11:08" itemprop="dateModified" datetime="2024-03-16T11:11:08+08:00">2024-03-16</time>
+      <time title="修改时间：2024-03-16 11:13:21" itemprop="dateModified" datetime="2024-03-16T11:13:21+08:00">2024-03-16</time>
     </span>
 
   
@@ -541,86 +671,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="PVE-安装-Synology-NAS"><a href="#PVE-安装-Synology-NAS" class="headerlink" title="PVE 安装 Synology NAS"></a>PVE 安装 Synology NAS</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压文件</span></span><br><span class="line">root@HomeLab:~/files<span class="comment"># unzip arpl-1.1-beta2a.img.zip</span></span><br><span class="line">Archive:  arpl-1.1-beta2a.img.zip</span><br><span class="line">  inflating: arpl.img                </span><br><span class="line">root@HomeLab:~/files<span class="comment"># ls -lt</span></span><br><span class="line">total 2361440</span><br><span class="line">-rw-r--r-- 1 root root  135880678 Mar  4 15:06 arpl-1.1-beta2a.img.zip</span><br><span class="line">-rw-r--r-- 1 root root 1073741824 Feb 28 01:33 arpl.img</span><br><span class="line">-rw-r--r-- 1 root root 1208483840 Feb 25 22:11 openwrt-x86-64-generic-ext4-combined.img</span><br><span class="line"><span class="comment"># 挂载镜像文件</span></span><br><span class="line">root@HomeLab:~/files<span class="comment"># qm importdisk 101 /root/files/arpl.img local-lvm</span></span><br><span class="line">importing disk <span class="string">&#x27;/root/files/arpl.img&#x27;</span> to VM 101 ...</span><br><span class="line">  Logical volume <span class="string">&quot;vm-101-disk-0&quot;</span> created.</span><br><span class="line">transferred 0.0 B of 1.0 GiB (0.00%)</span><br><span class="line">transferred 12.0 MiB of 1.0 GiB (1.17%)</span><br><span class="line">transferred 24.0 MiB of 1.0 GiB (2.34%)</span><br><span class="line">transferred 36.0 MiB of 1.0 GiB (3.52%)</span><br><span class="line">transferred 48.0 MiB of 1.0 GiB (4.69%)</span><br><span class="line">transferred 60.0 MiB of 1.0 GiB (5.86%)</span><br><span class="line">transferred 72.0 MiB of 1.0 GiB (7.03%)</span><br><span class="line">transferred 84.0 MiB of 1.0 GiB (8.20%)</span><br><span class="line">transferred 96.1 MiB of 1.0 GiB (9.38%)</span><br><span class="line">transferred 108.0 MiB of 1.0 GiB (10.55%)</span><br><span class="line">transferred 120.0 MiB of 1.0 GiB (11.72%)</span><br><span class="line">transferred 132.0 MiB of 1.0 GiB (12.89%)</span><br><span class="line">transferred 144.0 MiB of 1.0 GiB (14.06%)</span><br><span class="line">transferred 156.0 MiB of 1.0 GiB (15.23%)</span><br><span class="line">transferred 168.0 MiB of 1.0 GiB (16.41%)</span><br><span class="line">transferred 180.0 MiB of 1.0 GiB (17.58%)</span><br><span class="line">transferred 192.0 MiB of 1.0 GiB (18.75%)</span><br><span class="line">transferred 204.0 MiB of 1.0 GiB (19.92%)</span><br><span class="line">transferred 216.0 MiB of 1.0 GiB (21.09%)</span><br><span class="line">transferred 228.0 MiB of 1.0 GiB (22.27%)</span><br><span class="line">transferred 240.0 MiB of 1.0 GiB (23.44%)</span><br><span class="line">transferred 252.0 MiB of 1.0 GiB (24.61%)</span><br><span class="line">transferred 264.0 MiB of 1.0 GiB (25.78%)</span><br><span class="line">transferred 276.0 MiB of 1.0 GiB (26.95%)</span><br><span class="line">transferred 287.9 MiB of 1.0 GiB (28.12%)</span><br><span class="line">transferred 300.0 MiB of 1.0 GiB (29.30%)</span><br><span class="line">transferred 312.0 MiB of 1.0 GiB (30.47%)</span><br><span class="line">transferred 324.0 MiB of 1.0 GiB (31.64%)</span><br><span class="line">transferred 336.0 MiB of 1.0 GiB (32.81%)</span><br><span class="line">transferred 348.0 MiB of 1.0 GiB (33.98%)</span><br><span class="line">transferred 360.0 MiB of 1.0 GiB (35.16%)</span><br><span class="line">transferred 372.0 MiB of 1.0 GiB (36.33%)</span><br><span class="line">transferred 384.0 MiB of 1.0 GiB (37.50%)</span><br><span class="line">transferred 396.0 MiB of 1.0 GiB (38.67%)</span><br><span class="line">transferred 408.0 MiB of 1.0 GiB (39.84%)</span><br><span class="line">transferred 420.0 MiB of 1.0 GiB (41.02%)</span><br><span class="line">transferred 432.0 MiB of 1.0 GiB (42.19%)</span><br><span class="line">transferred 444.0 MiB of 1.0 GiB (43.36%)</span><br><span class="line">transferred 456.0 MiB of 1.0 GiB (44.53%)</span><br><span class="line">transferred 468.0 MiB of 1.0 GiB (45.70%)</span><br><span class="line">transferred 480.1 MiB of 1.0 GiB (46.88%)</span><br><span class="line">transferred 492.0 MiB of 1.0 GiB (48.05%)</span><br><span class="line">transferred 504.0 MiB of 1.0 GiB (49.22%)</span><br><span class="line">transferred 516.0 MiB of 1.0 GiB (50.39%)</span><br><span class="line">transferred 528.0 MiB of 1.0 GiB (51.56%)</span><br><span class="line">transferred 540.0 MiB of 1.0 GiB (52.73%)</span><br><span class="line">transferred 552.0 MiB of 1.0 GiB (53.91%)</span><br><span class="line">transferred 564.0 MiB of 1.0 GiB (55.08%)</span><br><span class="line">transferred 576.0 MiB of 1.0 GiB (56.25%)</span><br><span class="line">transferred 588.0 MiB of 1.0 GiB (57.42%)</span><br><span class="line">transferred 600.0 MiB of 1.0 GiB (58.59%)</span><br><span class="line">transferred 612.0 MiB of 1.0 GiB (59.77%)</span><br><span class="line">transferred 624.0 MiB of 1.0 GiB (60.94%)</span><br><span class="line">transferred 636.0 MiB of 1.0 GiB (62.11%)</span><br><span class="line">transferred 648.0 MiB of 1.0 GiB (63.28%)</span><br><span class="line">transferred 660.0 MiB of 1.0 GiB (64.45%)</span><br><span class="line">transferred 671.9 MiB of 1.0 GiB (65.62%)</span><br><span class="line">transferred 684.0 MiB of 1.0 GiB (66.80%)</span><br><span class="line">transferred 696.0 MiB of 1.0 GiB (67.97%)</span><br><span class="line">transferred 708.0 MiB of 1.0 GiB (69.14%)</span><br><span class="line">transferred 720.0 MiB of 1.0 GiB (70.31%)</span><br><span class="line">transferred 732.0 MiB of 1.0 GiB (71.48%)</span><br><span class="line">transferred 744.0 MiB of 1.0 GiB (72.66%)</span><br><span class="line">transferred 756.0 MiB of 1.0 GiB (73.83%)</span><br><span class="line">transferred 768.0 MiB of 1.0 GiB (75.00%)</span><br><span class="line">transferred 780.0 MiB of 1.0 GiB (76.17%)</span><br><span class="line">transferred 792.0 MiB of 1.0 GiB (77.34%)</span><br><span class="line">transferred 804.0 MiB of 1.0 GiB (78.52%)</span><br><span class="line">transferred 816.0 MiB of 1.0 GiB (79.69%)</span><br><span class="line">transferred 828.0 MiB of 1.0 GiB (80.86%)</span><br><span class="line">transferred 840.0 MiB of 1.0 GiB (82.03%)</span><br><span class="line">transferred 852.0 MiB of 1.0 GiB (83.20%)</span><br><span class="line">transferred 864.1 MiB of 1.0 GiB (84.38%)</span><br><span class="line">transferred 876.0 MiB of 1.0 GiB (85.55%)</span><br><span class="line">transferred 888.0 MiB of 1.0 GiB (86.72%)</span><br><span class="line">transferred 900.0 MiB of 1.0 GiB (87.89%)</span><br><span class="line">transferred 912.0 MiB of 1.0 GiB (89.06%)</span><br><span class="line">transferred 924.0 MiB of 1.0 GiB (90.23%)</span><br><span class="line">transferred 936.0 MiB of 1.0 GiB (91.41%)</span><br><span class="line">transferred 948.0 MiB of 1.0 GiB (92.58%)</span><br><span class="line">transferred 960.0 MiB of 1.0 GiB (93.75%)</span><br><span class="line">transferred 972.0 MiB of 1.0 GiB (94.92%)</span><br><span class="line">transferred 984.0 MiB of 1.0 GiB (96.09%)</span><br><span class="line">transferred 996.0 MiB of 1.0 GiB (97.27%)</span><br><span class="line">transferred 1008.0 MiB of 1.0 GiB (98.44%)</span><br><span class="line">transferred 1020.0 MiB of 1.0 GiB (99.61%)</span><br><span class="line">transferred 1.0 GiB of 1.0 GiB (100.00%)</span><br><span class="line">transferred 1.0 GiB of 1.0 GiB (100.00%)</span><br><span class="line">Successfully imported disk as <span class="string">&#x27;unused0:local-lvm:vm-101-disk-0&#x27;</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://clockworkmonkeystudio.com/2023/03/01/PVE%20%E5%AE%89%E8%A3%85%20OpenWrt/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="GG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | ClockworkMonkey Studio">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/03/01/PVE%20%E5%AE%89%E8%A3%85%20OpenWrt/" class="post-title-link" itemprop="url">PVE 安装 OpenWrt</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-03-01 10:00:00" itemprop="dateCreated datePublished" datetime="2023-03-01T10:00:00+08:00">2023-03-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-16 11:11:08" itemprop="dateModified" datetime="2024-03-16T11:11:08+08:00">2024-03-16</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="上传镜像文件"><a href="#上传镜像文件" class="headerlink" title="上传镜像文件"></a>上传镜像文件</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@HomeLab:~/files<span class="comment"># ls -l</span></span><br><span class="line">total 1180164</span><br><span class="line">-rw-r--r-- 1 root root 1208483840 Feb 25 22:11 openwrt-x86-64-generic-ext4-combined.img</span><br></pre></td></tr></table></figure>
-
-<h1 id="挂载镜像文件至虚拟机"><a href="#挂载镜像文件至虚拟机" class="headerlink" title="挂载镜像文件至虚拟机"></a>挂载镜像文件至虚拟机</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 挂载</span></span><br><span class="line">root@HomeLab:~/files<span class="comment"># qm importdisk 100 /root/files/openwrt-x86-64-generic-ext4-combined.img local-lvm</span></span><br><span class="line">importing disk <span class="string">&#x27;/root/files/openwrt-x86-64-generic-ext4-combined.img&#x27;</span> to VM 100 ...</span><br><span class="line">  Rounding up size to full physical extent &lt;1.13 GiB</span><br><span class="line">  Logical volume <span class="string">&quot;vm-100-disk-0&quot;</span> created.</span><br><span class="line">transferred 0.0 B of 1.1 GiB (0.00%)</span><br><span class="line">transferred 12.0 MiB of 1.1 GiB (1.04%)</span><br><span class="line">transferred 24.0 MiB of 1.1 GiB (2.08%)</span><br><span class="line">transferred 36.0 MiB of 1.1 GiB (3.12%)</span><br><span class="line">transferred 47.9 MiB of 1.1 GiB (4.16%)</span><br><span class="line">transferred 60.0 MiB of 1.1 GiB (5.21%)</span><br><span class="line">···</span><br><span class="line">transferred 1.1 GiB of 1.1 GiB (99.96%)</span><br><span class="line">transferred 1.1 GiB of 1.1 GiB (100.00%)</span><br><span class="line">transferred 1.1 GiB of 1.1 GiB (100.00%)</span><br><span class="line">Successfully imported disk as <span class="string">&#x27;unused0:local-lvm:vm-100-disk-0&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="修改-IP"><a href="#修改-IP" class="headerlink" title="修改 IP"></a>修改 IP</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/config/network</span><br></pre></td></tr></table></figure>
 
       
     </div>
