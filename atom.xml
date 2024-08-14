@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ClockworkMonkey Studio</title>
+  <icon>https://clockworkmonkeystudio.com/icon.png</icon>
+  
+  <link href="https://clockworkmonkeystudio.com/atom.xml" rel="self"/>
+  
+  <link href="https://clockworkmonkeystudio.com/"/>
+  <updated>2024-08-14T12:16:28.560Z</updated>
+  <id>https://clockworkmonkeystudio.com/</id>
+  
+  <author>
+    <name>GG</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小米 R3G 路由器刷 openwrt 固件</title>
+    <link href="https://clockworkmonkeystudio.com/2024/03/16/XiaoMiR3G/"/>
+    <id>https://clockworkmonkeystudio.com/2024/03/16/XiaoMiR3G/</id>
+    <published>2024-03-16T03:00:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;更新开发者版本固件&quot;&gt;&lt;a href=&quot;#更新开发者版本固件&quot; class=&quot;headerlink&quot; title=&quot;更新开发者版本固件&quot;&gt;&lt;/a&gt;更新开发者版本固件&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;固件下载地址：&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>macOS 下编译 OpenWrt （M1 芯片）</title>
+    <link href="https://clockworkmonkeystudio.com/2024/03/09/macOS%20%E7%BC%96%E8%AF%91%20OpenWrt/"/>
+    <id>https://clockworkmonkeystudio.com/2024/03/09/macOS%20%E7%BC%96%E8%AF%91%20OpenWrt/</id>
+    <published>2024-03-09T11:00:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;新建区分大小写的-APFS-宗卷&quot;&gt;&lt;a href=&quot;#新建区分大小写的-APFS-宗卷&quot; class=&quot;headerlink&quot; title=&quot;新建区分大小写的 APFS 宗卷&quot;&gt;&lt;/a&gt;新建区分大小写的 APFS 宗卷&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>树莓派共享 Wi-Fi</title>
+    <link href="https://clockworkmonkeystudio.com/2023/08/29/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%B1%E4%BA%AB%20Wi-Fi/"/>
+    <id>https://clockworkmonkeystudio.com/2023/08/29/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%B1%E4%BA%AB%20Wi-Fi/</id>
+    <published>2023-08-29T01:00:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;更新&quot;&gt;&lt;a href=&quot;#更新&quot; class=&quot;headerlink&quot; title=&quot;更新&quot;&gt;&lt;/a&gt;更新&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;gg@RaspberryPi:~ $ sudo apt update&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Hit:1 https://mirrors.tuna.tsinghua.edu.cn/debian bullseye InRelease&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Get:2 https://mirrors.tuna.tsinghua.edu.cn/debian bullseye-updates InRelease [44.1 kB]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Get:3 https://mirrors.tuna.tsinghua.edu.cn/debian bullseye-backports InRelease [49.0 kB]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Hit:4 https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security InRelease&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Hit:5 https://mirrors.tuna.tsinghua.edu.cn/raspberrypi bullseye InRelease&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Fetched 93.0 kB &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; 2s (51.8 kB/s)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Reading package lists... Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Building dependency tree... Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Reading state information... Done&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;All packages are up to &lt;span class=&quot;built_in&quot;&gt;date&lt;/span&gt;.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>OpenWrt</title>
+    <link href="https://clockworkmonkeystudio.com/2023/03/10/OpenWrt/"/>
+    <id>https://clockworkmonkeystudio.com/2023/03/10/OpenWrt/</id>
+    <published>2023-03-10T02:00:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;OpenWrt&quot;&gt;&lt;a href=&quot;#OpenWrt&quot; class=&quot;headerlink&quot; title=&quot;OpenWrt&quot;&gt;&lt;/a&gt;OpenWrt&lt;/h1&gt;&lt;h1 id=&quot;编译-OpenWrt&quot;&gt;&lt;a href=&quot;#编译-OpenWrt&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PVE 安装 Synology NAS.md</title>
+    <link href="https://clockworkmonkeystudio.com/2023/03/02/PVE%20%E5%AE%89%E8%A3%85%20Synology%20NAS/"/>
+    <id>https://clockworkmonkeystudio.com/2023/03/02/PVE%20%E5%AE%89%E8%A3%85%20Synology%20NAS/</id>
+    <published>2023-03-02T02:00:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;PVE-安装-Synology-NAS&quot;&gt;&lt;a href=&quot;#PVE-安装-Synology-NAS&quot; class=&quot;headerlink&quot; title=&quot;PVE 安装 Synology NAS&quot;&gt;&lt;/a&gt;PVE 安装 Synology</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PVE 安装 OpenWrt</title>
+    <link href="https://clockworkmonkeystudio.com/2023/03/01/PVE%20%E5%AE%89%E8%A3%85%20OpenWrt/"/>
+    <id>https://clockworkmonkeystudio.com/2023/03/01/PVE%20%E5%AE%89%E8%A3%85%20OpenWrt/</id>
+    <published>2023-03-01T02:00:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;上传镜像文件&quot;&gt;&lt;a href=&quot;#上传镜像文件&quot; class=&quot;headerlink&quot; title=&quot;上传镜像文件&quot;&gt;&lt;/a&gt;上传镜像文件&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PVE 设置硬件直通</title>
+    <link href="https://clockworkmonkeystudio.com/2023/02/28/PVE%20%E8%AE%BE%E7%BD%AE%E7%A1%AC%E4%BB%B6%E7%9B%B4%E9%80%9A/"/>
+    <id>https://clockworkmonkeystudio.com/2023/02/28/PVE%20%E8%AE%BE%E7%BD%AE%E7%A1%AC%E4%BB%B6%E7%9B%B4%E9%80%9A/</id>
+    <published>2023-02-28T02:00:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;PVE-设置硬件直通&quot;&gt;&lt;a href=&quot;#PVE-设置硬件直通&quot; class=&quot;headerlink&quot; title=&quot;PVE 设置硬件直通&quot;&gt;&lt;/a&gt;PVE 设置硬件直通&lt;/h1&gt;&lt;h2 id=&quot;参考文档：&quot;&gt;&lt;a href=&quot;#参考文档：&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Synology NAS</title>
+    <link href="https://clockworkmonkeystudio.com/2023/02/13/Synology%20NAS/"/>
+    <id>https://clockworkmonkeystudio.com/2023/02/13/Synology%20NAS/</id>
+    <published>2023-02-13T04:15:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;黑群晖&quot;&gt;&lt;a href=&quot;#黑群晖&quot; class=&quot;headerlink&quot; title=&quot;黑群晖&quot;&gt;&lt;/a&gt;黑群晖&lt;/h1&gt;&lt;h1 id=&quot;硬件直通&quot;&gt;&lt;a href=&quot;#硬件直通&quot; class=&quot;headerlink&quot; title=&quot;硬件直通&quot;&gt;&lt;/a&gt;硬件直通&lt;/h1&gt;&lt;p&gt;在 PVE 中添加 PCIE 设备时提示： &lt;code&gt;No IOMMU detected, please activate it.See Documentation for further information.&lt;/code&gt;，需要开启 iommu。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>PVE 初始化配置</title>
+    <link href="https://clockworkmonkeystudio.com/2022/09/04/PVE%20%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE/"/>
+    <id>https://clockworkmonkeystudio.com/2022/09/04/PVE%20%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE/</id>
+    <published>2022-09-04T15:29:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;修改基础系统（Debian）的源文件-etc-apt-sources-list-和-Proxmox-的源文件&quot;&gt;&lt;a href=&quot;#修改基础系统（Debian）的源文件-etc-apt-sources-list-和-Proxmox-的源文件&quot; class=&quot;headerlink&quot; title=&quot;修改基础系统（Debian）的源文件 /etc/apt/sources.list 和 Proxmox 的源文件&quot;&gt;&lt;/a&gt;修改基础系统（Debian）的源文件 /etc/apt/sources.list 和 Proxmox 的源文件&lt;/h1&gt;&lt;h2 id=&quot;修改基础系统（Debian）的源文件&quot;&gt;&lt;a href=&quot;#修改基础系统（Debian）的源文件&quot; class=&quot;headerlink&quot; title=&quot;修改基础系统（Debian）的源文件&quot;&gt;&lt;/a&gt;修改基础系统（Debian）的源文件&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 备份&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@HomeLab:~&lt;span class=&quot;comment&quot;&gt;# cp /etc/apt/sources.list /etc/apt/sources.list_backup&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@HomeLab:~&lt;span class=&quot;comment&quot;&gt;# cp /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/pve-enterprise.list_backup&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 替换成中科大换&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@HomeLab:~&lt;span class=&quot;comment&quot;&gt;# sed -i &amp;#x27;s|^deb http://ftp.debian.org|deb https://mirrors.ustc.edu.cn|g&amp;#x27; /etc/apt/sources.list&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@HomeLab:~&lt;span class=&quot;comment&quot;&gt;# sed -i &amp;#x27;s|^deb http://security.debian.org|deb https://mirrors.ustc.edu.cn/debian-security|g&amp;#x27; /etc/apt/sources.list&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 查看替换结果&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@HomeLab:~&lt;span class=&quot;comment&quot;&gt;# cat /etc/apt/sources.list&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb https://mirrors.ustc.edu.cn/debian bullseye main contrib&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb https://mirrors.ustc.edu.cn/debian bullseye-updates main contrib&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# security updates&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;deb https://mirrors.ustc.edu.cn/debian-security bullseye-security main contrib&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Log</title>
+    <link href="https://clockworkmonkeystudio.com/2022/04/29/Log/"/>
+    <id>https://clockworkmonkeystudio.com/2022/04/29/Log/</id>
+    <published>2022-04-29T04:58:00.000Z</published>
+    <updated>2024-08-14T12:16:28.556Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;默认日志格式&quot;&gt;&lt;a href=&quot;#默认日志格式&quot; class=&quot;headerlink&quot; title=&quot;默认日志格式&quot;&gt;&lt;/a&gt;默认日志格式&lt;/h1&gt;&lt;h2 id=&quot;logback&quot;&gt;&lt;a href=&quot;#logback&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS 用户和用户组</title>
+    <link href="https://clockworkmonkeystudio.com/2022/04/29/CentOS%20User%20And%20Group/"/>
+    <id>https://clockworkmonkeystudio.com/2022/04/29/CentOS%20User%20And%20Group/</id>
+    <published>2022-04-29T02:00:00.000Z</published>
+    <updated>2024-08-14T12:16:28.556Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CentOS-用户和用户组&quot;&gt;&lt;a href=&quot;#CentOS-用户和用户组&quot; class=&quot;headerlink&quot; title=&quot;CentOS 用户和用户组&quot;&gt;&lt;/a&gt;CentOS 用户和用户组&lt;/h1&gt;&lt;h2 id=&quot;添加组和用户&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Redis</title>
+    <link href="https://clockworkmonkeystudio.com/2022/04/13/Redis/"/>
+    <id>https://clockworkmonkeystudio.com/2022/04/13/Redis/</id>
+    <published>2022-04-13T13:21:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://redis.io/&quot;&gt;https://redis.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ESP32</title>
+    <link href="https://clockworkmonkeystudio.com/2022/04/04/ESP32/"/>
+    <id>https://clockworkmonkeystudio.com/2022/04/04/ESP32/</id>
+    <published>2022-04-04T05:07:19.000Z</published>
+    <updated>2024-08-14T12:16:28.556Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot; title=&quot;图片&quot;&gt;&lt;/a&gt;图片&lt;/h1&gt;&lt;img src=&quot;/2022/04/04/ESP32/ESP32.png&quot; class=&quot;&quot; title=&quot;ESP32</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Keepalived</title>
+    <link href="https://clockworkmonkeystudio.com/2022/04/04/Keepalived/"/>
+    <id>https://clockworkmonkeystudio.com/2022/04/04/Keepalived/</id>
+    <published>2022-04-04T04:28:00.000Z</published>
+    <updated>2024-08-14T12:16:28.556Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Keepalived&quot;&gt;&lt;a href=&quot;#Keepalived&quot; class=&quot;headerlink&quot; title=&quot;Keepalived&quot;&gt;&lt;/a&gt;Keepalived&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.keepalived.org/&quot;&gt;https://www.keepalived.org/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;CentOS 版本：7.9.2009&lt;/li&gt;
+&lt;li&gt;Keepalived 版本：v2.2.7&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx</title>
+    <link href="https://clockworkmonkeystudio.com/2022/03/31/Nginx/"/>
+    <id>https://clockworkmonkeystudio.com/2022/03/31/Nginx/</id>
+    <published>2022-03-31T02:58:51.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Nginx-常用版本&quot;&gt;&lt;a href=&quot;#Nginx-常用版本&quot; class=&quot;headerlink&quot; title=&quot;Nginx 常用版本&quot;&gt;&lt;/a&gt;Nginx 常用版本&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Nginx 开源版 &lt;a href=&quot;https://nginx.org/&quot;&gt;https://nginx.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Nginx plus 商业版 &lt;a href=&quot;https://www.nginx.com/&quot;&gt;https://www.nginx.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Openresty &lt;a href=&quot;https://openresty.org/cn/&quot;&gt;https://openresty.org/cn/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tengine &lt;a href=&quot;https://tengine.taobao.org/&quot;&gt;https://tengine.taobao.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>crontab</title>
+    <link href="https://clockworkmonkeystudio.com/2022/03/30/crontab/"/>
+    <id>https://clockworkmonkeystudio.com/2022/03/30/crontab/</id>
+    <published>2022-03-30T15:00:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Linux-crontab-命令&quot;&gt;&lt;a href=&quot;#Linux-crontab-命令&quot; class=&quot;headerlink&quot; title=&quot;Linux crontab 命令&quot;&gt;&lt;/a&gt;Linux crontab 命令&lt;/h1&gt;&lt;p&gt;Linux crontab 是用来定期执行程序的命令。&lt;/p&gt;
+&lt;p&gt;crond 命令每分钟会定期检查是否有要执行的工作，如果有要执行的工作便会自动执行该工作。&lt;/p&gt;
+&lt;h1 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h1&gt;&lt;p&gt;&lt;code&gt;crontab [ -u user ] file&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;或&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;crontab [ -u user ] &amp;#123; -l | -r | -e &amp;#125;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;说明：&lt;/p&gt;
+&lt;p&gt;crontab 是用来让使用者在固定时间或固定间隔执行程序之用，换句话说，也就是类似使用者的时程表。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-u user&lt;/code&gt; 是指设定指定 user 的时程表，这个前提是你必须要有其权限(比如说是 root)才能够指定他人的时程表。如果不使用 &lt;code&gt;-u user&lt;/code&gt; 的话，就是表示设定自己的时程表。&lt;/p&gt;
+&lt;p&gt;参数说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-e&lt;/code&gt; : 执行文字编辑器来设定时程表，内定的文字编辑器是 VI，如果你想用别的文字编辑器，则请先设定 VISUAL 环境变数来指定使用那个文字编辑器(比如说 setenv VISUAL joe)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-r&lt;/code&gt; : 删除目前的时程表&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-l&lt;/code&gt; : 列出目前的时程表&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SFTP</title>
+    <link href="https://clockworkmonkeystudio.com/2022/03/30/SFTP/"/>
+    <id>https://clockworkmonkeystudio.com/2022/03/30/SFTP/</id>
+    <published>2022-03-30T14:58:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SFTP-命令&quot;&gt;&lt;a href=&quot;#SFTP-命令&quot; class=&quot;headerlink&quot; title=&quot;SFTP 命令&quot;&gt;&lt;/a&gt;SFTP 命令&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;help&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Maven</title>
+    <link href="https://clockworkmonkeystudio.com/2022/03/30/Maven/"/>
+    <id>https://clockworkmonkeystudio.com/2022/03/30/Maven/</id>
+    <published>2022-03-30T13:30:00.000Z</published>
+    <updated>2024-08-14T12:16:28.556Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;镜像文件&quot;&gt;&lt;a href=&quot;#镜像文件&quot; class=&quot;headerlink&quot; title=&quot;镜像文件&quot;&gt;&lt;/a&gt;镜像文件&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;settings.xml&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tar</title>
+    <link href="https://clockworkmonkeystudio.com/2022/03/30/tar/"/>
+    <id>https://clockworkmonkeystudio.com/2022/03/30/tar/</id>
+    <published>2022-03-30T12:55:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;tar-命令&quot;&gt;&lt;a href=&quot;#tar-命令&quot; class=&quot;headerlink&quot; title=&quot;tar 命令&quot;&gt;&lt;/a&gt;tar 命令&lt;/h1&gt;&lt;p&gt;&lt;code&gt;.tar&lt;/code&gt; 格式，打包和解打包都是使用 &lt;code&gt;tar&lt;/code&gt; 命令，只是打包并不会压缩文件。&lt;/p&gt;
+&lt;h1 id=&quot;打包&quot;&gt;&lt;a href=&quot;#打包&quot; class=&quot;headerlink&quot; title=&quot;打包&quot;&gt;&lt;/a&gt;打包&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-c 打包&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f 指定包名称，需要加 .tar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v 显示打包过程&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;解包&quot;&gt;&lt;a href=&quot;#解包&quot; class=&quot;headerlink&quot; title=&quot;解包&quot;&gt;&lt;/a&gt;解包&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-x 解包&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-f 指定包名称&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-v 显示打包过程&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>yum</title>
+    <link href="https://clockworkmonkeystudio.com/2022/03/30/yum/"/>
+    <id>https://clockworkmonkeystudio.com/2022/03/30/yum/</id>
+    <published>2022-03-30T12:55:00.000Z</published>
+    <updated>2024-08-14T12:16:28.560Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;备份源文件&quot;&gt;&lt;a href=&quot;#备份源文件&quot; class=&quot;headerlink&quot; title=&quot;备份源文件&quot;&gt;&lt;/a&gt;备份源文件&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;mv&lt;/span&gt; /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;源配置列表&quot;&gt;&lt;a href=&quot;#源配置列表&quot; class=&quot;headerlink&quot; title=&quot;源配置列表&quot;&gt;&lt;/a&gt;源配置列表&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# CentOS6&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.cloud.tencent.com/repo/centos6_base.repo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# CentOS7&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.cloud.tencent.com/repo/centos7_base.repo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# CentOS8&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.cloud.tencent.com/repo/centos8_base.repo&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;更新缓存&quot;&gt;&lt;a href=&quot;#更新缓存&quot; class=&quot;headerlink&quot; title=&quot;更新缓存&quot;&gt;&lt;/a&gt;更新缓存&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@localhost yum.repos.d]&lt;span class=&quot;comment&quot;&gt;# yum clean all&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[root@localhost yum.repos.d]&lt;span class=&quot;comment&quot;&gt;# yum makecache&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+</feed>
